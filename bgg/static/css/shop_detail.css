@@ -1,0 +1,185 @@
+.content_box {
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.content_box .body_box {
+  font-size: 0.32rem;
+  box-sizing: border-box;
+}
+.content_box .body_box .shop_info {
+  background: #FFFFFF;
+  border-bottom: 0.2rem solid #F3F3F3;
+}
+.content_box .body_box .shop_info .info_top {
+  padding: 0.2rem;
+}
+.content_box .body_box .shop_info .info_top .shop_img {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-top: 0.1rem;
+}
+.content_box .body_box .shop_info .info_top .shop_img img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.content_box .body_box .shop_info .info_top .shop_desc {
+  width: 5rem;
+  line-height: 0.5rem;
+}
+.content_box .body_box .shop_info .info_top .shop_desc .shop_name {
+  font-size: 0.34rem;
+  color: #333333;
+}
+.content_box .body_box .shop_info .info_top .shop_desc .shop_id {
+  font-size: 0.3rem;
+  color: #525252;
+}
+.content_box .body_box .shop_info .info_top .shop_desc .shop_connect_name {
+  font-size: 0.26rem;
+  color: #787878;
+}
+.content_box .body_box .shop_info .info_top .shop_desc .connect_phone {
+  font-size: 0.24rem;
+}
+.content_box .body_box .shop_info .info_top .shop_desc .connect_phone .call_btn {
+  display: inline-block;
+  width: 1rem;
+  height: 0.5rem;
+  text-align: center;
+  background: #69D472;
+  border-radius: 0.07rem;
+  color: #FFFFFF;
+}
+.content_box .body_box .shop_info .info_top .shop_desc .connect_phone .shop_connect_phone {
+  color: #7D7D7D;
+}
+.content_box .body_box .shop_address {
+  background: #FFFFFF;
+  padding: 0 0.2rem;
+  height: 1.1rem;
+  line-height: 1.1rem;
+  border-bottom: 0.2rem solid #F3F3F3;
+  color: #413F3F;
+  display: flex;
+}
+.content_box .body_box .shop_address .address {
+  flex: 1;
+}
+.content_box .body_box .shop_address .address_icon {
+  display: inline-block;
+  width: 0.5rem;
+  height: 1.1rem;
+  background: url(../img/address.png) no-repeat left center;
+  background-size: 0.33rem 0.42rem;
+}
+.content_box .body_box .identification_photo {
+  padding: 0 0.2rem;
+  background: #FFFFFF;
+}
+.content_box .body_box .identification_photo .title {
+  color: #413F3F;
+  line-height: 1rem;
+}
+.content_box .body_box .identification_photo .img_list_box {
+  display: flex;
+}
+.content_box .body_box .identification_photo .img_list_box .photo_box {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: 0.3rem;
+}
+.content_box .body_box .identification_photo .img_list_box .photo_box img {
+  width: 100%;
+  height: 100%;
+}
+.content_box .body_box .btn_box {
+  position: absolute;
+  bottom: 0;
+  padding: 0.7rem;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+.content_box .body_box .btn_box .unrefused {
+  display: inline-block;
+  width: 2.6rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  text-align: center;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  display: none;
+}
+.content_box .body_box .btn_box .agree {
+  color: #FFFFFF;
+  background: #F64D38;
+}
+.content_box .body_box .btn_box .refuse {
+  border: 0.02rem solid #F64D38;
+  color: #F64D38;
+}
+.content_box .body_box .btn_box .refused {
+  display: inline-block;
+  width: 6.1rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  text-align: center;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  background: #D8D8D8;
+  color: #FFFFFF;
+}
+.content_box .refuse_reason_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 0.32rem;
+  z-index: 99;
+}
+.content_box .refuse_reason_modal .modal_content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 6.6rem;
+  background: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.content_box .refuse_reason_modal .modal_content .title {
+  font-size: 0.34rem;
+  color: #252424;
+}
+.content_box .refuse_reason_modal .modal_content .textarea {
+  width: 6.8rem;
+  height: 3.2rem;
+  background: #F8F8F8;
+  border-radius: 0.1rem;
+  resize: none;
+  padding: 0.3rem;
+  box-sizing: border-box;
+}
+.content_box .refuse_reason_modal .modal_content .confirm_btn {
+  font-size: 0.34rem;
+  outline: none;
+  border: none;
+  display: inline-block;
+  width: 5rem;
+  height: 0.9rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  background: #D8D8D8;
+  color: #FFFFFF;
+}
+/*# sourceMappingURL=shop_detail.css.map */

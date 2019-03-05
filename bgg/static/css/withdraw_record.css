@@ -1,0 +1,57 @@
+.content_box {
+  background: #FFFFFF;
+}
+.content_box .body_box .record_list_box .record_list .record_item {
+  height: 1.8rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  padding: 0.2rem 0;
+  box-sizing: border-box;
+}
+.content_box .body_box .record_list_box .record_list .record_item .record_type {
+  width: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_box .body_box .record_list_box .record_list .record_item .record_type img {
+  width: 1rem;
+  height: 1rem;
+}
+.content_box .body_box .record_list_box .record_list .record_item .center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content_box .body_box .record_list_box .record_list .record_item .center .record_title {
+  font-size: 0.3rem;
+  color: #3F3F3F;
+  letter-spacing: 0.01rem;
+}
+.content_box .body_box .record_list_box .record_list .record_item .center .record_balance {
+  font-size: 0.24rem;
+  color: #2F2F2F;
+}
+.content_box .body_box .record_list_box .record_list .record_item .center .record_time {
+  font-size: 0.22rem;
+  color: #808080;
+}
+.content_box .body_box .record_list_box .record_list .record_item .right {
+  width: 2rem;
+  padding-right: 0.2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.content_box .body_box .record_list_box .record_list .record_item .right .record_money {
+  font-size: 0.38rem;
+  color: #3F3F3F;
+}
+.content_box .body_box .record_list_box .record_list .record_item .right .status {
+  font-size: 0.28rem;
+  color: #777777;
+  letter-spacing: 0.03rem;
+}

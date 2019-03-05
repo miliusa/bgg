@@ -1,0 +1,110 @@
+.content_box {
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+  padding-bottom: 1.4rem;
+}
+.content_box .white {
+  border-bottom: 1px solid #eee;
+}
+.content_box .body_box .list {
+  padding: 0 0.3rem;
+  margin-top: 0.1rem;
+  background-color: #fff;
+  position: relative;
+}
+.content_box .body_box .list.default:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #F24242;
+  width: 1rem;
+  height: 100%;
+  background: url(../img/moren.png) no-repeat center center;
+  background-size: 0.4rem 0.4rem;
+}
+.content_box .body_box .list .info {
+  position: relative;
+  padding: 0.3rem 1rem 0.3rem 0;
+  border-bottom: 1px solid #e7e7e7;
+}
+.content_box .body_box .list .info .info_text .info_user {
+  font-size: 0.3rem;
+  line-height: 0.42rem;
+  margin-bottom: 0.11rem;
+}
+.content_box .body_box .list .info .info_text .address_center {
+  font-size: 0.28rem;
+  line-height: 0.4rem;
+}
+.content_box .body_box .list .info .info_delete {
+  position: absolute;
+  top: 0.25rem;
+  right: 0;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: url(../img/shanchudizhi.png) no-repeat center center;
+  background-size: 0.28rem 0.28rem;
+}
+.content_box .body_box .list .default {
+  padding: 0.18rem 0;
+  font-size: 0;
+}
+.content_box .body_box .list .default .default_block {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+}
+.content_box .body_box .list .default .default_block span {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0.28rem;
+  line-height: 0.42rem;
+}
+.content_box .body_box .list .default .default_block .default_icon {
+  width: 0.42rem;
+  height: 0.42rem;
+  background: url(../img/gou.png) no-repeat;
+  background-size: 100% 100%;
+  margin-right: 0.18rem;
+}
+.content_box .body_box .list .default .default_block .default_text,
+.content_box .body_box .list .default .default_block .default_redact {
+  color: #ABABAB;
+}
+.content_box .body_box .list .default .default_block.active .default_icon {
+  background: url(../img/moren.png) no-repeat;
+  background-size: 100% 100%;
+}
+.content_box .body_box .list .default .default_block.active .default_text {
+  color: #F24242;
+}
+.content_box .default_wrapper {
+  overflow: hidden;
+  z-index: 99;
+  position: fixed;
+  bottom: 0;
+  background-color: #f3f3f3;
+  width: 100%;
+}
+.content_box .default_wrapper .default_btn {
+  text-align: center;
+  font-size: 0;
+}
+.content_box .default_wrapper .default_btn span {
+  display: inline-block;
+  vertical-align: top;
+}
+.content_box .default_wrapper .default_btn .jia {
+  width: 0.28rem;
+  height: 0.28rem;
+  background: url(../img/xingzengdizhi.png) no-repeat;
+  background-size: 100% 100%;
+  margin: 0.31rem 0;
+}
+.content_box .default_wrapper .default_btn .text {
+  font-size: 0.32rem;
+  line-height: 0.9rem;
+  margin-left: 0.14rem;
+}

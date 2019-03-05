@@ -1,0 +1,126 @@
+.content_box {
+    min-height: 100vh;
+    background-color: #f3f3f3;
+    .white {
+        border-bottom: 1px solid #e7e7e7;
+        .save {
+            position: absolute;
+            top: 0;
+            right: 0.38rem;
+            font-size: 0.28rem;
+            line-height: 0.9rem;
+            color: #595959;
+        }
+        .save.active {
+            color: #EA5A3C;
+        }
+    }
+    .body_box {
+        .list_wrapper {
+            padding: 0 0.3rem;
+            background-color: #fff;
+            .list {
+                position: relative;
+                padding: 0.34rem 0;
+                border-bottom: 1px solid #e7e7e7;
+                font-size: 0;
+                span {
+                    position: absolute;
+                    right: 0;
+                    top: 0.4rem;
+                    display: inline-block;
+                    width: 0.3rem;
+                    height: 0.3rem;
+                    background: url(../img/rightbig.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+                input {
+                    width: 100%;
+                    font-size: 0.3rem;
+                    line-height: 0.4rem;
+                }
+                //              .label {
+                //                  display: inline-block;
+                //                  vertical-align: top;
+                //                  width: 30%;
+                //                  font-size: 0.3rem;
+                //                  line-height: 0.4rem;
+                //                  color: #7e7e7e;
+                //              }
+                //              .text {
+                //                  display: inline-block;
+                //                  vertical-align: top;
+                //                  width: 70%;
+                //                  font-size: 0;
+                //                  input {
+                //                      text-align: right;
+                //                      width: 100%;
+                //                      font-size: 0.3rem;
+                //                      line-height: 0.4rem;
+                //                  }
+                //              }
+                //              .text_change{
+                //                  display: inline-block;
+                //                  vertical-align: top;
+                //                  width: 70%;
+                //                  font-size: 0;
+                //                  input {
+                //                      text-align: right;
+                //                      width: 100%;
+                //                      font-size: 0.3rem;
+                //                      line-height: 0.4rem;
+                //                      box-sizing: border-box;
+                //                      padding-right: 0.4rem;
+                //                  }
+                //              }
+            }
+        }
+        .address {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0.34rem 0.3rem;
+            font-size: 0.3rem;
+            line-height: 0.44rem;
+            resize: none; //禁止用户调整大小
+        }
+        .default {
+            padding: 0.2rem 0.3rem;
+            margin-top: 0.22rem;
+            font-size: 0;
+            background-color: #fff;
+            .default_text,
+            .default_icon {
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+            }
+            .default_text {
+                font-size: 0.28rem;
+                line-height: 0.54rem;
+            }
+            .default_icon {
+                text-align: right;
+                span {
+                    display: inline-block;
+                    width: 1.1rem;
+                    height: 0.54rem;
+                    background: url(../img/huisedizhi.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+                span.active {
+                    background: url(../img/moredizhihuad.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+        }
+        .delete {
+            padding: 0.34rem 0.3rem;
+            font-size: 0.28rem;
+            line-height: 0.4rem;
+            color: #EA5A3C;
+            background-color:  #fff;
+            margin-top: 0.1rem;
+        }
+    }
+}

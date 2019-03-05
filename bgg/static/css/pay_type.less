@@ -1,0 +1,66 @@
+.content_box{
+  background-color: #f3f3f3;
+  min-height:100vh;
+  overflow: hidden;
+  .body_box{
+    .pay_info{
+      margin-bottom: 0.1rem;
+      background: #ffffff;
+      font-size: 0.27rem;
+      padding: 0 10px;
+      line-height: 1rem;
+      .ordersn{
+        border-bottom: 1px solid #EEEEEE;
+      }
+      span:first-child{
+        display: inline-block;
+        width: 5em;
+        text-align: justify;
+      }
+    }
+    .pay_type {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9;
+      .pay_content {
+        width: 100%;
+        background-color: #eee;
+        .pay_list {
+          height: 1.4rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #fff;
+          border-bottom: 1px solid #eee;
+          &:last-child {
+            border: none;
+          }
+          .pay_draw {
+            width: 1.4rem;
+            height: 1.4rem;
+            background: url(../img/gou.png) no-repeat center center;
+            background-size: 0.36rem 0.36rem;
+          }
+          .pay_draw.active {
+            background: url(../img/gouh.png) no-repeat center center;
+            background-size: 0.36rem 0.36rem;
+          }
+          .pay_icon {
+            width: 1.4rem;
+            img {
+              width: 0.84rem;
+              height: 0.84rem;
+              margin: 0 auto;
+            }
+          }
+          .pay_text {
+            flex: 1;
+            overflow: hidden;
+            font-size: 0.32rem;
+            line-height: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.content_box {
+  min-height: 100vh;
+  background: #F3F3F3;
+}
+.content_box .body_box .coupon_list {
+  padding: 0.2rem;
+  box-sizing: border-box;
+  font-size: 0.26rem;
+}
+.content_box .body_box .coupon_list .coupon_item {
+  background: url(../img/coupon_bg.png) no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 2.2rem;
+  border-radius: 0.1rem;
+  margin-bottom: 0.2rem;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+.content_box .body_box .coupon_list .coupon_item .item_top {
+  box-sizing: border-box;
+  height: 1.5rem;
+  padding-top: 0.2rem;
+  overflow: hidden;
+}
+.content_box .body_box .coupon_list .coupon_item .item_top .coupon_rule .title {
+  color: #f5633a;
+  font-size: 0.5rem;
+  line-height: 0.8rem;
+}
+.content_box .body_box .coupon_list .coupon_item .item_top .coupon_rule .rule {
+  font-size: 0.24rem;
+}
+.content_box .body_box .coupon_list .coupon_item .item_top .coupon_value {
+  color: #f5633a;
+  height: 100%;
+  line-height: 1.3rem;
+}
+.content_box .body_box .coupon_list .coupon_item .item_top .coupon_value .unit {
+  display: inline-block;
+  font-size: 0.36rem;
+}
+.content_box .body_box .coupon_list .coupon_item .item_top .coupon_value .credit {
+  display: inline-block;
+  font-size: 0.8rem;
+}
+.content_box .body_box .coupon_list .coupon_item .item_bottom {
+  height: 0.7rem;
+  line-height: 0.7rem;
+}
+.content_box .body_box .coupon_list .coupon_item .item_bottom .available_time {
+  font-size: 0.24rem;
+}
+.content_box .body_box .coupon_list .coupon_item .item_bottom .use_status {
+  font-size: 0.32rem;
+}
+.content_box .body_box .coupon_list .coupon_item.unuse {
+  color: #f5633a;
+}
+.content_box .body_box .coupon_list .coupon_item.disabled {
+  background: url(../img/couopn_gray_bg.png) no-repeat;
+  background-size: 100% 100%;
+  color: #B7B7B7 !important;
+}
+.content_box .body_box .coupon_list .coupon_item.disabled .title {
+  color: #B7B7B7 !important;
+}
+.content_box .body_box .coupon_list .coupon_item.disabled .coupon_value {
+  color: #B7B7B7 !important;
+}
+.mui-scroll-wrapper {
+  top: 0.9rem;
+}

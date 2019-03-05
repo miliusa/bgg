@@ -1,0 +1,129 @@
+.content_box {
+  min-height: 100vh;
+  padding: 0;
+  background-color: #f3f3f3;
+}
+.content_box .title {
+  background: url(../img/rectanglecopy.png) no-repeat;
+  background-size: 100% 100%;
+}
+.content_box .title .head {
+  position: relative;
+}
+.content_box .title .head .back_icon {
+  position: absolute;
+  height: 0.9rem;
+  width: 0.8rem;
+  top: 0;
+  left: 0;
+  background: url(../img/left.png) center center no-repeat;
+  background-size: 0.2rem 0.36rem;
+}
+.content_box .title .head p {
+  width: 100%;
+  text-align: center;
+  font-size: 0.36rem;
+  line-height: 0.9rem;
+  color: #fff;
+}
+.content_box .title .logo {
+  text-align: center;
+  border-radius: 50%;
+  width: 1.79rem;
+  height: 1.79rem;
+  line-height: 1.79rem;
+  background-color: #fff;
+  font-size: 0.36rem;
+  color: #F2805A;
+  margin: 0.2rem auto 0.37rem auto;
+}
+.content_box .title .des {
+  text-align: center;
+  font-size: 0;
+}
+.content_box .title .des span {
+  display: inline-block;
+  vertical-align: top;
+}
+.content_box .title .des .integral {
+  font-size: 0.26rem;
+  line-height: 0.34rem;
+  color: #FFFFFF;
+}
+.content_box .title .des .diamond {
+  width: 0.34rem;
+  height: 0.34rem;
+  background: url(../img/huiyuan.png) no-repeat;
+  background-size: 100% 100%;
+  margin: 0 0.08rem 1rem 0;
+}
+.content_box .body_box {
+  margin: -0.61rem 0 0.61rem 0;
+}
+.content_box .body_box .score {
+  border-radius: 0.13rem;
+  width: 7rem;
+  padding: 0.36rem 0.44rem;
+  background-color: #fff;
+  margin: 0 auto 0.1rem auto;
+  box-sizing: border-box;
+}
+.content_box .body_box .score .label {
+  width: 2rem;
+  float: left;
+  font-size: 0.35rem;
+  line-height: 0.5rem;
+  color: #383737;
+}
+.content_box .body_box .score .text {
+  overflow: hidden;
+  text-align: right;
+  font-size: 0;
+}
+.content_box .body_box .score .text .star {
+  display: inline-block;
+  vertical-align: top;
+  width: 0.34rem;
+  height: 0.34rem;
+  background: url(../img/starhui.png) no-repeat;
+  background-size: 100% 100%;
+  margin: 0.08rem 0.29rem 0.08rem 0;
+}
+.content_box .body_box .score .text .star:last-child {
+  margin: 0.08rem 0;
+}
+.content_box .body_box .score .text .star.red {
+  background: url(../img/star.png) no-repeat;
+  background-size: 100% 100%;
+}
+.content_box .body_box .info {
+  overflow: hidden;
+  width: 7rem;
+  border-radius: 0.13rem;
+  margin: 0 auto;
+}
+.content_box .body_box .info .list {
+  width: 100%;
+  padding: 0.29rem 0.44rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin-bottom: 1px;
+}
+.content_box .body_box .info .list:last-child {
+  margin: 0;
+}
+.content_box .body_box .info .list .name {
+  float: left;
+  width: 2rem;
+  font-size: 0.34rem;
+  color: #383737;
+  line-height: 0.48rem;
+}
+.content_box .body_box .info .list .center {
+  text-align: right;
+  overflow: hidden;
+  font-size: 0.32rem;
+  line-height: 0.48rem;
+  color: #777777;
+}
+/*# sourceMappingURL=consum_detail.css.map */

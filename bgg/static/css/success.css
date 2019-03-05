@@ -1,0 +1,68 @@
+.content_box .white {
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+}
+.content_box .body_box {
+  overflow: hidden;
+}
+.content_box .body_box .success_icon {
+  margin-top: 0.75rem;
+}
+.content_box .body_box .success_icon img {
+  width: 2.8rem;
+  margin: 0 auto;
+}
+.content_box .body_box .success_text {
+  text-align: center;
+  font-size: 0.54rem;
+  line-height: 0.75rem;
+  color: #394D60;
+  margin: 0.39rem 0 1.91rem 0;
+  letter-spacing: 0.02rem;
+}
+.content_box .body_box .success_btn {
+  font-size: 0;
+}
+.content_box .body_box .success_btn .success_block {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+.content_box .body_box .success_btn .detals,
+.content_box .body_box .success_btn .walk {
+  text-align: center;
+  width: 2.57rem;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-size: 0.3rem;
+  border-radius: 1rem;
+}
+.content_box .body_box .success_btn .detals {
+  border: 1px solid #F64D38;
+  color: #F64D38;
+}
+.content_box .body_box .success_btn .walk {
+  background-color: #F64D38;
+  color: #fff;
+}
+.content_box .body_box .success_btn .withdraw_success_block {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+.content_box .body_box .success_btn .withdraw_success_block .confirm {
+  text-align: center;
+  width: 6rem;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  letter-spacing: 0.02rem;
+  font-size: 0.32rem;
+  border-radius: 1rem;
+  background-color: #F64D38;
+  color: #fff;
+}
+/*# sourceMappingURL=success.css.map */

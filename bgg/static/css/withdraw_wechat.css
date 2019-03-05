@@ -1,0 +1,47 @@
+.content_box .body_box {
+  overflow: hidden;
+}
+.content_box .body_box .title {
+  font-size: 0.3rem;
+  line-height: 0.42rem;
+  color: #939393;
+  margin: 0.35rem 0 0.61rem 0.3rem;
+}
+.content_box .body_box .content {
+  width: 4.9rem;
+  margin: 0 auto;
+  font-size: 0;
+}
+.content_box .body_box .content .content_icon {
+  display: block;
+  width: 0.74rem;
+  font-size: 0.8rem;
+  line-height: 1.12rem;
+  color: #3F3F3F;
+  float: left;
+}
+.content_box .body_box .content .content_text {
+  display: block;
+  overflow: hidden;
+}
+.content_box .body_box .content .content_text input {
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+  height: 1.12rem;
+  line-height: 1.12rem;
+  color: #AAAAAA;
+  box-sizing: border-box;
+  border-bottom: 1px solid #CFCFCF;
+}
+.content_box .body_box .des {
+  margin: 0 0.3rem;
+  font-size: 0.26rem;
+  line-height: 0.33rem;
+  color: #939393;
+  margin-top: 0.38rem;
+}
+.content_box .body_box .default_btn {
+  margin: 0.54rem auto 0.25rem auto;
+}

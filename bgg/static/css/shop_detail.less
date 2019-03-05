@@ -1,0 +1,184 @@
+.content_box {
+    min-height: 100vh;
+    box-sizing: border-box;
+    .body_box {
+        font-size: 0.32rem;
+        box-sizing: border-box;
+        .shop_info {
+            background: #FFFFFF;
+            border-bottom: 0.2rem solid #F3F3F3;
+            .info_top {
+                padding: 0.2rem;
+                .shop_img {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    margin-top: 0.1rem;
+                    img {
+                        border-radius: 50%;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .shop_desc {
+                    width: 5rem;
+                    line-height: 0.5rem;
+                    .shop_name {
+                        font-size: 0.34rem;
+                        color: #333333;
+                    }
+                    .shop_id {
+                        font-size: 0.3rem;
+                        color: #525252;
+                    }
+                    .shop_connect_name {
+                        font-size: 0.26rem;
+                        color: #787878;
+                    }
+                    .connect_phone {
+                        font-size: 0.24rem;
+                        .call_btn {
+                            display: inline-block;
+                            width: 1rem;
+                            height: 0.5rem;
+                            text-align: center;
+                            background: #69D472;
+                            border-radius: 0.07rem;
+                            color: #FFFFFF;
+                        }
+                        .shop_connect_phone {
+                            color: #7D7D7D;
+                        }
+                    }
+                }
+            }
+        }
+        .shop_address {
+            background: #FFFFFF;
+            padding: 0 0.2rem;
+            height: 1.1rem;
+            line-height: 1.1rem;
+            border-bottom: 0.2rem solid #F3F3F3;
+            color: #413F3F;
+            display: flex;
+            .address {
+                flex: 1;
+            }
+            .address_icon {
+                display: inline-block;
+                width: 0.5rem;
+                height: 1.1rem;
+                background: url(../img/address.png) no-repeat left center;
+                background-size: 0.33rem 0.42rem;
+            }
+        }
+        .identification_photo {
+            padding: 0 0.2rem;
+            background: #FFFFFF;
+            .title {
+                color: #413F3F;
+                line-height: 1rem;
+            }
+            .img_list_box {
+                display: flex;
+                .photo_box {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    margin-right: 0.3rem;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .btn_box {
+            position: absolute;
+            bottom: 0;
+            padding: 0.7rem;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            .unrefused {
+                display: inline-block;
+                width: 2.6rem;
+                height: 0.9rem;
+                line-height: 0.9rem;
+                text-align: center;
+                -webkit-border-radius: 1rem;
+                -moz-border-radius: 1rem;
+                border-radius: 1rem;
+                display: none;
+            }
+            .agree {
+                color: #FFFFFF;
+                background: #F64D38;
+            }
+            .refuse {
+                border: 0.02rem solid #F64D38;
+                color: #F64D38;
+            }
+            .refused {
+                display: inline-block;
+                width: 6.1rem;
+                height: 0.9rem;
+                line-height: 0.9rem;
+                text-align: center;
+                -webkit-border-radius: 1rem;
+                -moz-border-radius: 1rem;
+                border-radius: 1rem;
+                background: #D8D8D8;
+                color: #FFFFFF;
+            }
+        }
+    }
+    .refuse_reason_modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .5);
+        font-size: 0.32rem;
+        z-index: 99;
+        .modal_content {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 6.6rem;
+            background: #fff;
+            text-align: center;
+            padding: 0.5rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .title {
+                font-size: 0.34rem;
+                color: #252424;
+            }
+            .textarea {
+                width: 6.8rem;
+                height: 3.2rem;
+                background: #F8F8F8;
+                border-radius: 0.1rem;
+                resize: none;
+                padding: 0.3rem;
+                box-sizing: border-box;
+            }
+            .confirm_btn {
+                font-size: 0.34rem;
+                outline: none;
+                border: none;
+                display: inline-block;
+                width: 5rem;
+                height: 0.9rem;
+                -webkit-border-radius: 1rem;
+                -moz-border-radius: 1rem;
+                border-radius: 1rem;
+                background: #D8D8D8;
+                color: #FFFFFF;
+            }
+        }
+    }
+}

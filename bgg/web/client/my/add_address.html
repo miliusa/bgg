@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Author" content="MXY">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>添加收货地址</title>
+		<link href="../../../static/css/share.css" rel="stylesheet" type="text/css" />
+		<link href="../../../static/css/add_address.css" rel="stylesheet" type="text/css" />
+		<link href="../../../static/css/LArea.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div class="content_box">
+			<div class="head_box white">
+				<i class="head_left_icon"></i>
+				<div class="head_title">添加收货地址</div>
+				<span class="save active">保存</span>
+			</div>
+			<div class="body_box">
+				<!--<div class="list_wrapper">
+					<div class="list">
+						<div class="label">收货人</div>
+						<div class="text">
+							<input type="text" placeholder="请输入您的姓名" />
+						</div>
+					</div>
+				</div>-->
+				<div class="list_wrapper">
+					<div class="list">
+						<input type="text" placeholder="收货人" name="user" class="realname"/>
+					</div>
+				</div>
+				<div class="list_wrapper">
+					<div class="list">
+						<input type="text" placeholder="手机号码" class="mobile"/>
+					</div>
+				</div>
+				<div class="list_wrapper">
+					<div class="list">
+						<input type="text" id="cityname" readonly placeholder="所在地区" name="city">
+						<span></span>
+					</div>
+				</div>
+				<textarea class="address" placeholder="详细地址：如道路、门牌号、小区、单元号等" rows="3"></textarea>
+				<div class="default">
+					<div class="default_text">设为默认地址</div>
+					<div class="default_icon">
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../static/js/jquery-1.11.0.min.js"></script>
+		<script src="../../../static/js/share.js"></script>
+		<script src="../../../static/js/LArea.js"></script>
+		<script src="../../../static/js/LAreaData1.js"></script>
+		<script src="../../../static/js/LAreaData2.js"></script>
+		<script src="../../../static/js/client/add_address.js"></script>
+	</body>
+
+</html>

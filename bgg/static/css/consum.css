@@ -1,0 +1,186 @@
+.content_box {
+  padding: 0.9rem 0 0 0;
+}
+.content_box .title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0.9rem;
+  box-sizing: border-box;
+  padding: 0.14rem 0;
+  background: url(../img/Rectangle.png);
+  background-size: 100% 100%;
+  width: 100%;
+}
+.content_box .title .input {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 0.78rem;
+  overflow: hidden;
+  width: 4.62rem;
+  border-radius: 0.8rem;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.content_box .title .input input {
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  font-size: 0.26rem;
+  line-height: 0.3rem;
+  color: #fff;
+  margin: 0.15rem 0;
+  letter-spacing: 0.02rem;
+}
+.content_box .title .input input::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 0.26rem;
+}
+.content_box .title .input input:-moz-placeholder {
+  color: #fff;
+  font-size: 0.26rem;
+}
+.content_box .title .input input::-moz-placeholder {
+  color: #fff;
+  font-size: 0.26rem;
+}
+.content_box .title .input input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 0.26rem;
+}
+.content_box .title .input .search_icon {
+  position: absolute;
+  top: 0.16rem;
+  left: 0.27rem;
+  display: inline-block;
+  width: 0.24rem;
+  height: 0.28rem;
+  background: url(../img/ss.png);
+  background-size: 100% 100%;
+}
+.content_box .title .screen {
+  position: absolute;
+  top: 0.28rem;
+  left: 0;
+  text-align: center;
+  font-size: 0;
+  width: 1.44rem;
+  height: 0.32rem;
+}
+.content_box .title .screen span {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.content_box .title .screen .screen_text {
+  font-size: 0.3rem;
+  line-height: 0.32rem;
+  color: #fff;
+}
+.content_box .title .screen .screen_icon {
+  width: 0.12rem;
+  height: 0.12rem;
+  background: url(../img/xiala.png);
+  background-size: 100% 100%;
+  margin-left: 0.06rem;
+}
+.content_box .body_box .list_wrapper {
+  padding: 0 0.2rem;
+}
+.content_box .body_box .list_wrapper .list {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #EEEEEE;
+}
+.content_box .body_box .list_wrapper .list .img_wrapper {
+  float: left;
+  width: 1.67rem;
+  height: 1.67rem;
+  margin-right: 0.2rem;
+  background-color: #fff;
+}
+.content_box .body_box .list_wrapper .list .img_wrapper img {
+  width: 100%;
+  height: 100%;
+}
+.content_box .body_box .list_wrapper .list .text_wrapper {
+  overflow: hidden;
+}
+.content_box .body_box .list_wrapper .list .text_wrapper .label {
+  margin-right: 0.16rem;
+  float: left;
+}
+.content_box .body_box .list_wrapper .list .text_wrapper .text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.content_box .body_box .list_wrapper .list .text_wrapper .name {
+  margin-top: 0.06rem;
+  font-size: 0;
+}
+.content_box .body_box .list_wrapper .list .text_wrapper .name .label,
+.content_box .body_box .list_wrapper .list .text_wrapper .name .text {
+  font-size: 0.3rem;
+  line-height: 0.42rem;
+}
+.content_box .body_box .list_wrapper .list .text_wrapper .info {
+  font-size: 0;
+  margin-top: 0.2rem;
+}
+.content_box .body_box .list_wrapper .list .text_wrapper .info .label,
+.content_box .body_box .list_wrapper .list .text_wrapper .info .text {
+  font-size: 0.28rem;
+  line-height: 0.4rem;
+  color: #525252;
+}
+.content_box .body_box .list_wrapper .list .text_wrapper .phone {
+  font-size: 0;
+  margin-top: 0.2rem;
+}
+.content_box .body_box .list_wrapper .list .text_wrapper .phone .label,
+.content_box .body_box .list_wrapper .list .text_wrapper .phone .text {
+  font-size: 0.24rem;
+  line-height: 0.33rem;
+  color: #7D7D7D;
+}
+.content_box .body_box .shop_list_box .shop_list .shop_item {
+  background: #FFFFFF;
+  border-bottom: 1px solid #EEEEEE;
+  padding: 0.2rem;
+}
+.content_box .body_box .shop_list_box .shop_list .shop_item .shop_img {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-top: 0.1rem;
+}
+.content_box .body_box .shop_list_box .shop_list .shop_item .shop_img img {
+  border-radius: 0.1rem;
+  width: 100%;
+  height: 100%;
+}
+.content_box .body_box .shop_list_box .shop_list .shop_item .shop_desc {
+  width: 5rem;
+  line-height: 0.5rem;
+}
+.content_box .body_box .shop_list_box .shop_list .shop_item .shop_desc .shop_name {
+  font-size: 0.34rem;
+  color: #333333;
+}
+.content_box .body_box .shop_list_box .shop_list .shop_item .shop_desc .shop_id {
+  font-size: 0.3rem;
+  color: #525252;
+}
+.content_box .body_box .shop_list_box .shop_list .shop_item .shop_desc .shop_connect_name {
+  font-size: 0.26rem;
+  color: #787878;
+}
+.content_box .body_box .shop_list_box .shop_list .shop_item .shop_desc .connect_phone {
+  font-size: 0.24rem;
+}
+.content_box .body_box .shop_list_box .shop_list .shop_item .shop_desc .connect_phone .status {
+  color: #EE5E3B;
+  font-size: 0.34rem;
+}
+.content_box .body_box .shop_list_box .shop_list .shop_item .shop_desc .connect_phone .shop_connect_phone {
+  color: #7D7D7D;
+}
+/*# sourceMappingURL=consum.css.map */

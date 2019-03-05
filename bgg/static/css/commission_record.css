@@ -1,0 +1,21 @@
+.content_box .body_box .commission_list_box .commission_list .commission_item {
+  height: 1.6rem;
+  border-bottom: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  padding: 0.3rem;
+}
+.content_box .body_box .commission_list_box .commission_list .commission_item .left {
+  line-height: 0.5rem;
+}
+.content_box .body_box .commission_list_box .commission_list .commission_item .left .text {
+  font-size: 0.32rem;
+}
+.content_box .body_box .commission_list_box .commission_list .commission_item .left .time {
+  font-size: 0.22rem;
+  color: #999999;
+}
+.content_box .body_box .commission_list_box .commission_list .commission_item .right .money {
+  line-height: 1rem;
+  font-size: 0.38rem;
+}
+/*# sourceMappingURL=commission_record.css.map */

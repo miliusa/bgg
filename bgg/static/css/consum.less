@@ -1,0 +1,191 @@
+.content_box {
+    padding: 0.9rem 0 0 0;
+    .title {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 0.9rem;
+        box-sizing: border-box;
+        padding: 0.14rem 0;
+        background: url(../img/Rectangle.png);
+        background-size: 100% 100%;
+        width: 100%;
+        .input {
+            position: relative;
+            box-sizing: border-box;
+            padding-left: 0.78rem;
+            overflow: hidden;
+            width: 4.62rem;
+            border-radius: 0.8rem;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.16);
+            input {
+                background-color: transparent;
+                display: block;
+                width: 100%;
+                font-size: 0.26rem;
+                line-height: 0.3rem;
+                color: #fff;
+                margin: 0.15rem 0;
+                letter-spacing: 0.02rem;
+            }
+            input::-webkit-input-placeholder {
+                color: #fff;
+                font-size: 0.26rem;
+            }
+            input:-moz-placeholder {
+                color: #fff;
+                font-size: 0.26rem;
+            }
+            input::-moz-placeholder {
+                color: #fff;
+                font-size: 0.26rem;
+            }
+            input:-ms-input-placeholder {
+                color: #fff;
+                font-size: 0.26rem;
+            }
+            .search_icon {
+                position: absolute;
+                top: 0.16rem;
+                left: 0.27rem;
+                display: inline-block;
+                width: 0.24rem;
+                height: 0.28rem;
+                background: url(../img/ss.png);
+                background-size: 100% 100%;
+            }
+        }
+        .screen {
+            position: absolute;
+            top: 0.28rem;
+            left: 0;
+            text-align: center;
+            font-size: 0;
+            width: 1.44rem;
+            height: 0.32rem;
+            span {
+                display: inline-block;
+                vertical-align: bottom;
+            }
+            .screen_text {
+                font-size: 0.3rem;
+                line-height: 0.32rem;
+                color: #fff;
+            }
+            .screen_icon {
+                width: 0.12rem;
+                height: 0.12rem;
+                background: url(../img/xiala.png);
+                background-size: 100% 100%;
+                margin-left: 0.06rem;
+            }
+        }
+    }
+    .body_box {
+        .list_wrapper {
+            padding: 0 0.2rem;
+            .list {
+                padding: 0.3rem 0;
+                border-bottom: 1px solid #EEEEEE;
+                .img_wrapper {
+                    float: left;
+                    width: 1.67rem;
+                    height: 1.67rem;
+                    margin-right: 0.2rem;
+                    background-color: #fff;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .text_wrapper {
+                    overflow: hidden;
+                    .label {
+                        margin-right: 0.16rem;
+                        float: left;
+                    }
+                    .text {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    .name {
+                        margin-top: 0.06rem;
+                        font-size: 0;
+                        .label,
+                        .text {
+                            font-size: 0.3rem;
+                            line-height: 0.42rem;
+                        }
+                    }
+                    .info {
+                        font-size: 0;
+                        margin-top: 0.2rem;
+                        .label,
+                        .text {
+                            font-size: 0.28rem;
+                            line-height: 0.4rem;
+                            color: #525252;
+                        }
+                    }
+                    .phone {
+                        font-size: 0;
+                        margin-top: 0.2rem;
+                        .label,
+                        .text {
+                            font-size: 0.24rem;
+                            line-height: 0.33rem;
+                            color: #7D7D7D;
+                        }
+                    }
+                }
+            }
+        }
+        .shop_list_box {
+            .shop_list {
+                .shop_item {
+                    background: #FFFFFF;
+                    border-bottom: 1px solid #EEEEEE;
+                    padding: 0.2rem;
+                    .shop_img {
+                        width: 1.8rem;
+                        height: 1.8rem;
+                        margin-top: 0.1rem;
+                        img {
+                            border-radius: 0.1rem;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .shop_desc {
+                        width: 5rem;
+                        line-height: 0.5rem;
+                        .shop_name {
+                            font-size: 0.34rem;
+                            color: #333333;
+                        }
+                        .shop_id {
+                            font-size: 0.3rem;
+                            color: #525252;
+                        }
+                        .shop_connect_name {
+                            font-size: 0.26rem;
+                            color: #787878;
+                        }
+                        .connect_phone {
+                            font-size: 0.24rem;
+                            .status {
+                                color: #EE5E3B;
+                                font-size: 0.34rem;
+                            }
+                            .shop_connect_phone {
+                                color: #7D7D7D;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

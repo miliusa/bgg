@@ -1,0 +1,268 @@
+a,
+body,
+html {
+	color: #333;
+}
+
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+
+body,
+dd,
+dl,
+form,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	margin: 0
+}
+
+button,
+input,
+select,
+textarea {
+	font-size: 100%;
+	outline: none;
+}
+
+a {
+	text-decoration: none
+}
+
+img {
+	display: block;
+}
+
+a img {
+	border: 0;
+	vertical-align: middle
+}
+
+input,
+textarea {
+	margin: 0;
+	padding: 0;
+	outline: 0
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+.fr {
+	float: right
+}
+
+.fl {
+	float: left
+}
+
+.clear:after {
+	content: "";
+	height: 0;
+	visibility: hidden;
+	display: block;
+	clear: both;
+}
+
+.hide {
+	display: none;
+}
+
+.yahei {
+	font-family: arial, Hiragino Sans GB, Microsoft Yahei, 微软雅黑, 宋体, 宋体, Tahoma, Arial, Helvetica, STHeiti;
+}
+
+.color_999 {
+	color: #999;
+}
+
+input,
+textarea {
+	border: none;
+	outline: none;
+}
+
+.price_color {
+	color: #ef211a;
+}
+
+.default_btn {
+	display: block;
+	font-size: 0.32rem;
+	letter-spacing: 0.02rem;
+	width: 7rem;
+	margin: 0.25rem auto;
+	height: 0.9rem;
+	background: #f5633a;
+	color: #FFFFFF;
+	border: none;
+	outline: none;
+	border-radius: 0.1rem;
+}
+
+
+/*公用部分*/
+
+.content_box {
+	width: 100%;
+	height: 100%;
+	padding-top: 0.9rem;
+	box-sizing: border-box;
+	position: relative;
+}
+
+
+/*头部公共样式*/
+
+.head_box {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	height: 0.9rem;
+	width: 100%;
+	overflow: hidden;
+	background: #f5633a;
+}
+
+.head_left_icon {
+	position: absolute;
+	height: 0.9rem;
+	width: 0.8rem;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	left: 0;
+	background: url('../img/left.png') center center no-repeat;
+	background-size: 0.2rem 0.36rem;
+}
+
+.head_title {
+	width: 100%;
+	text-align: center;
+	font-size: 0.36rem;
+	line-height: 0.9rem;
+	color: #fff;
+}
+
+.head_box.white {
+	background: #FFFFFF;
+	border-bottom: 1px solid #F3F3F3;
+	box-sizing: border-box;
+}
+
+.white .head_left_icon {
+	background: url('../img/black_return.png') center center no-repeat;
+	background-size: 0.2rem 0.36rem;
+}
+
+.white .head_title {
+	color: #000;
+}
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide img{
+	width:100%;
+	height:100%;
+}
+
+.foot_box {
+	padding-bottom: 1rem;
+}
+
+
+.text_ellipsis_1{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/*提示框*/
+.hiht_black {
+   text-align: center;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translateX(-50%) translateY(-50%);
+   box-sizing: border-box;
+   background: rgba(0, 0, 0, 0.5);
+   z-index: 1001;
+   padding: 0.2rem 0.4rem;
+   border-radius: 0.1rem;
+   color: #fff;
+   font-size: 0.28rem;
+   max-width: 80%;
+}
+
+.confirm-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 1001;
+	font-size: 0.32rem;
+}
+.confirm-modal .confirm-content {
+	background: #FFFFFF;
+	width: 80%;
+	height: 3rem;
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	margin-top: -1.5rem;
+	border-radius: 0.1rem;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.confirm-modal .confirm-content .top-info {
+	flex: 1;
+	text-align: center;
+	border-bottom: 1px solid #eee;
+	box-sizing: border-box;
+}
+.confirm-modal .confirm-content .top-info .top-title {
+	line-height: 2rem;
+}
+.confirm-modal .confirm-content .bottom-btns {
+	width: 100%;
+	display: flex;
+	height: 1rem;
+	text-align: center;
+}
+.confirm-modal .confirm-content .bottom-btns .cancel-btn {
+	flex: 1;
+	line-height: 1rem;
+	color: #f5633a;
+}
+.confirm-modal .confirm-content .bottom-btns .confirm-btn {
+	flex: 1;
+	line-height: 1rem;
+	background: #f5633a;
+	color: #fff;
+}
