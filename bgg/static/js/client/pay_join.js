@@ -30,6 +30,7 @@ $(function(){
 	})
 
 	$('.pay_type').on('click', '.pay_list.active', function(){
+		ing()
 		var $self = $(this)
 		$(this).removeClass('active')
 		$(this).children('.pay_draw').addClass('active').parent().siblings().children('.pay_draw').removeClass('active')
@@ -54,8 +55,11 @@ $(function(){
 						$self.addClass('active')
 						var str = res.data
 						// 调用原生方法
-						doAlipayPayment(str)
+						doAlipayPayment(str, 2)
+					}else{
+						blackHiht(res.message)
 					}
+					ingend()
 				},
 				error: function () {
 					blackHiht('网络错误')
@@ -81,8 +85,11 @@ $(function(){
 						$self.addClass('active')
 						var str = JSON.stringify(res.data)
 						// 调用原生方法
-						doWeChatPayment(str)
+						doWeChatPayment(str, 2)
+					}else{
+						blackHiht(res.message)
 					}
+					ingend()
 				},
 				error: function () {
 					blackHiht('网络错误')

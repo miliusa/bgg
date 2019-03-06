@@ -8,7 +8,7 @@
 		<title>添加收货地址</title>
 		<link href="../../../static/css/share.css" rel="stylesheet" type="text/css" />
 		<link href="../../../static/css/add_address.css" rel="stylesheet" type="text/css" />
-		<link href="../../../static/css/LArea.css" rel="stylesheet" type="text/css" />
+		<!--<link href="../../../static/css/LArea.css" rel="stylesheet" type="text/css" />-->
 	</head>
 
 	<body>
@@ -39,11 +39,13 @@
 				</div>
 				<div class="list_wrapper">
 					<div class="list">
-						<input type="text" id="cityname" readonly placeholder="所在地区" name="city">
+						<input type="text" id="addressInfo" readonly placeholder="所在地区" name="city">
+						<input type="hidden" id="longitude">
+						<input type="hidden" id="latitude">
 						<span></span>
 					</div>
 				</div>
-				<textarea class="address" placeholder="详细地址：如道路、门牌号、小区、单元号等" rows="3"></textarea>
+				<textarea class="address" placeholder="详细地址：如道路、门牌号、小区、单元号等" rows="3" id="detailAddressInfo"></textarea>
 				<div class="default">
 					<div class="default_text">设为默认地址</div>
 					<div class="default_icon">
@@ -54,9 +56,8 @@
 		</div>
 		<script src="../../../static/js/jquery-1.11.0.min.js"></script>
 		<script src="../../../static/js/share.js"></script>
-		<script src="../../../static/js/LArea.js"></script>
-		<script src="../../../static/js/LAreaData1.js"></script>
-		<script src="../../../static/js/LAreaData2.js"></script>
+		<!--<script src="../../../static/js/LAreaData.js"></script>-->
+		<!--<script src="../../../static/js/LArea.js"></script>-->
 		<script src="../../../static/js/client/add_address.js"></script>
 	</body>
 

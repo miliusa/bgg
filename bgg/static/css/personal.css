@@ -14,7 +14,7 @@
   background: #FFFFFF;
 }
 .content_box .body_box .info_box .info_item.phone {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.1rem;
 }
 .content_box .body_box .info_box .info_item.avatar .right {
   height: 1rem;
@@ -22,8 +22,8 @@
   align-items: center;
 }
 .content_box .body_box .info_box .info_item.avatar .right .img_box {
-  width: 0.88rem;
-  height: 0.88rem;
+  width: 0.8rem;
+  height: 0.8rem;
   margin-right: 0.1rem;
 }
 .content_box .body_box .info_box .info_item.avatar .right .img_box img {
@@ -45,4 +45,13 @@
   float: right;
   color: #707070;
 }
-/*# sourceMappingURL=personal.css.map */
+.content_box .body_box .info_box .info_item.bank {
+  margin-top: 0.1rem;
+}
+.content_box .body_box .info_box .info_item.bank .right {
+  display: inline-block;
+  width: 0.33rem;
+  height: 1rem;
+  background: url(../img/right.png) no-repeat center center;
+  background-size: 0.33rem 0.33rem;
+}

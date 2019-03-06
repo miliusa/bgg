@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../../static/css/share.css" />
-    <link rel="stylesheet" href="../../../static/css/order.css" />
+    <link rel="stylesheet" href="../../../static/css/pay_type.css" />
     <title>付费加盟</title>
   </head>
 
@@ -18,29 +18,25 @@
         <div class="head_title">付费加盟</div>
       </div>
       <div class="body_box">
+        <div class="price_show">
+          <p class="price_desc">需支付: <span name="applyprice" class="price_color">￥</span></p>
+        </div>
         <!--选择支付方式-->
         <div class="pay_type pay_join">
           <div class="pay_content">
-            <div class="pay_list">
-              <div class="pay_draw active"></div>
+            <div class="pay_list active">
               <div class="pay_icon">
                 <img src="../../../static/img/zfb.png" />
               </div>
               <div class="pay_text">使用支付宝付款</div>
-            </div>
-            <div class="pay_list">
               <div class="pay_draw"></div>
-              <div class="pay_icon">
-                <img src="../../../static/img/yhk.png" />
-              </div>
-              <div class="pay_text">使用银行卡付款</div>
             </div>
-            <div class="pay_list">
-              <div class="pay_draw"></div>
+            <div class="pay_list active">
               <div class="pay_icon">
-                <img src="../../../static/img/weixin.png" />
+                <img src="../../../static/img/wx.png" />
               </div>
               <div class="pay_text">使用微信付款</div>
+              <div class="pay_draw"></div>
             </div>
           </div>
         </div>

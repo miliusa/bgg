@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Author" content="MXY">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>确认订单</title>
+		<link href="../../../static/css/share.css" rel="stylesheet" type="text/css" />
+		<link href="../../../static/css/order.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div class="content_box">
+			<div class="head_box">
+				<i class="head_left_icon"></i>
+				<div class="head_title">确认订单</div>
+			</div>
+			<div class="body_box">
+				<a href="select_address.html" class="address clear">
+					<div class="right_icon">
+						<img src="../../../static/img/right.png" />
+					</div>
+					<div class="left_icon">
+						<img src="../../../static/img/siteh.png" />
+					</div>
+					<div class="content_text color_999">
+						<div class="user_info">
+							<span class="user_name"></span>
+							<span class="user_phone"></span>
+						</div>
+						<div class="address_text"></div>
+					</div>
+				</a>
+				<div class="goods_wrapper">
+					<div class="goods">
+						<div class="goods_content clear">
+							<div class="goods_left">
+								<img src="../../../static/img/banner1.png" />
+							</div>
+							<div class="goods_des">
+								<div class="goods_title"></div>
+								<div class="goods_text clear">
+									<div class="goods_num">
+										<span class="subtract"></span>
+										<input name="count" type="text" readonly="readonly" value="1" class="number">
+										<span class="add"></span>
+									</div>
+									<div class="goods_price">¥<span></span></div>
+								</div>
+							</div>
+						</div>
+						<div class="price">
+							<div class="count">共<span></span>件商品</div>
+						</div>
+					</div>
+				</div>
+				<div class="info">
+					<div class="message clear">
+						<div class="label">买家留言</div>
+						<div class="info_text">
+							<input name="remark" type="text" placeholder="必填：买家留言(50字以内)" />
+						</div>
+					</div>
+					<div class="subtotal">
+						<div class="block clear">							
+							<div class="label">商品小计</div>
+							<div class="info_text">¥108.00</div>
+						</div>
+						<div class="block clear">							
+							<div class="label">优惠券</div>
+							<div class="info_text">0.00</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="foot clear">
+				<div class="foot_btn active" name="payment">立即支付</div>
+				<div class="foot_text">
+					<span>合计:</span>
+					<span class="price_color">¥<span class="total_price"></span></span>
+				</div>				
+			</div>
+			<!--&lt;!&ndash;选择支付方式&ndash;&gt;
+			<div class="pay_type">
+				<div class="pay_content">
+					<div class="pay_list">
+						<div class="pay_draw active"></div>
+						<div class="pay_icon">
+							<img src="../../../static/img/zfb.png" />
+						</div>
+						<div class="pay_text">使用支付宝付款</div>
+					</div>
+					<div class="pay_list">
+						<div class="pay_draw"></div>
+						<div class="pay_icon">
+							<img src="../../../static/img/yhk.png" />
+						</div>
+						<div class="pay_text">使用银行卡付款</div>
+					</div>
+					<div class="pay_list">
+						<div class="pay_draw"></div>
+						<div class="pay_icon">
+							<img src="../../../static/img/weixin.png" />
+						</div>
+						<div class="pay_text">使用微信付款</div>
+					</div>
+					<div class="pay_btn">取消</div>
+				</div>
+			</div>-->
+		</div>
+		<script src="../../../static/js/jquery-1.11.0.min.js"></script>
+		<script src="../../../static/js/share.js"></script>
+		<script src="../../../static/js/client/order.js"></script>
+	</body>
+
+</html>

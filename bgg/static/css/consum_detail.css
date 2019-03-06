@@ -9,15 +9,7 @@
 }
 .content_box .title .head {
   position: relative;
-}
-.content_box .title .head .back_icon {
-  position: absolute;
-  height: 0.9rem;
-  width: 0.8rem;
-  top: 0;
-  left: 0;
-  background: url(../img/left.png) center center no-repeat;
-  background-size: 0.2rem 0.36rem;
+  z-index: 10;
 }
 .content_box .title .head p {
   width: 100%;
@@ -27,15 +19,17 @@
   color: #fff;
 }
 .content_box .title .logo {
-  text-align: center;
-  border-radius: 50%;
   width: 1.79rem;
   height: 1.79rem;
-  line-height: 1.79rem;
-  background-color: #fff;
-  font-size: 0.36rem;
-  color: #F2805A;
   margin: 0.2rem auto 0.37rem auto;
+}
+.content_box .title .logo img {
+  background: #FFFFFF;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 50%;
 }
 .content_box .title .des {
   text-align: center;
@@ -126,4 +120,3 @@
   line-height: 0.48rem;
   color: #777777;
 }
-/*# sourceMappingURL=consum_detail.css.map */

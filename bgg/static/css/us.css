@@ -18,6 +18,12 @@
   font-size: 0.36rem;
   color: #EE5E3A;
   margin: 0 auto;
+  overflow: hidden;
+}
+.content_box .body_box .logo .logo_icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .content_box .body_box .logo .name {
   text-align: center;

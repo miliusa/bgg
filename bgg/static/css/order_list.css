@@ -14,7 +14,7 @@
   width: 100%;
   height: 1rem;
   background: #FFFFFF;
-  z-index: 2;
+  z-index: 10;
 }
 .content_box .tabbar .tab_item {
   line-height: 1rem;
@@ -47,6 +47,13 @@
 }
 .content_box .body_box .order_list_box .order_list .order_item:not(:last-child) {
   margin-bottom: 0.1rem;
+}
+.content_box .body_box .order_list_box .order_list .order_item .ordersn {
+  border-bottom: 1px solid #eee;
+  line-height: 0.8rem;
+  padding: 0 0.2rem;
+  font-size: 0.26rem;
+  color: #999;
 }
 .content_box .body_box .order_list_box .order_list .order_item .top_info {
   height: 2.2rem;
@@ -87,6 +94,7 @@
   font-size: 0.26rem;
 }
 .content_box .body_box .order_list_box .order_list .order_item .top_info .left_info {
+  width: 1.6rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -95,6 +103,20 @@
 .content_box .body_box .order_list_box .order_list .order_item .top_info .left_info .order_status {
   color: #FD4343;
   letter-spacing: 0.01rem;
+}
+.content_box .body_box .order_list_box .order_list .order_item .top_info .left_info .countdown .time {
+  display: inline-block;
+  width: 0.36rem;
+  height: 0.36rem;
+  line-height: 0.36rem;
+  border-radius: 0.1rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
+  font-size: 0.22rem;
+}
+.content_box .body_box .order_list_box .order_list .order_item .top_info .left_info .countdown .point {
+  font-size: 0.22rem;
 }
 .content_box .body_box .order_list_box .order_list .order_item .top_info .left_info .total_price {
   font-size: 0.24rem;

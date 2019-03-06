@@ -1,4 +1,5 @@
 $(function(){
+    loading()
     var page = 1
     var pagesize = 10
     function getCouponList(){
@@ -42,6 +43,7 @@ $(function(){
                 }else{
                     blackHiht(res.message)
                 }
+                loadend()
             },
             error: function () {
                 blackHiht('网络错误')
@@ -114,8 +116,8 @@ $(function(){
                             res = resstr;
                         }
                         if(res.code == 200){
-                            console.log(res)
                             blackHiht(res.message)
+                            getCouponList()
                         }else{
                             blackHiht(res.message)
                         }

@@ -21,6 +21,7 @@
   padding: 0 0.7rem;
   box-sizing: border-box;
   font-size: 0.28rem;
+  text-align: left;
   border: none;
 }
 .content_box .head_box .search_input .search_icon {
@@ -60,6 +61,7 @@
   background: #FFFFFF;
   box-shadow: 0 0.05rem 0.05rem #eee;
   box-sizing: border-box;
+  z-index: 10;
 }
 .content_box .order_bar .order_item {
   flex: 1;
@@ -69,6 +71,7 @@
   line-height: 1rem;
   font-size: 0.3rem;
   color: #2D2C2C;
+  background: #ffffff;
 }
 .content_box .order_bar .order_item.on {
   color: #F54B35;

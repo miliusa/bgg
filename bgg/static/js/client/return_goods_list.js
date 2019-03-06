@@ -44,8 +44,9 @@ $(function(){
                 if(res.code == 200){
                     var html = '';
                     $.each(res.data, function(index, item){
-                        var statusText = item.refundstatus == 1?'审核中':item.refundstatus == 2?'已退款': '未知'
-                        html += '<div class="order_item" data-id="' + item.id + '">'
+                        var statusText = item.refundstatus == 1?'审核中':item.refundstatus == 2?'已退款': ''
+                        html += '<div class="order_item" data-id="' + item.id + '">\
+									<p class="ordersn">订单编号: <span>' + item.ordersn + '</span></p>'
                         $.each(item.ordergoods, function (index1, item1) {
                             html += '<div class="top_info clear">\
                                     <div class="img_box fl">\
@@ -58,7 +59,7 @@ $(function(){
                                     </div>\
                                     <div class="left_info fl">\
                                         <p class="order_status">' + statusText + '</p>\
-                                        <p class="total_price color_999">合计：￥<span>' + item.price + '</span></p>\
+                                        <p class="total_price color_999">合计：￥<span>' + item1.price + '</span></p>\
                                     </div>\
                                 </div>'
                         })

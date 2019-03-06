@@ -1,23 +1,24 @@
 .content_box {
+    min-height: 100vh;
     padding: 0.9rem 0 0 0;
     .title {
         position: fixed;
         top: 0;
         left: 0;
         height: 0.9rem;
-        box-sizing: border-box;
-        padding: 0.14rem 0;
         background: url(../img/Rectangle.png);
         background-size: 100% 100%;
         width: 100%;
+        z-index: 10;
+        display: flex;
+        align-items: center;
         .input {
+            width: 5rem;
             position: relative;
             box-sizing: border-box;
             padding-left: 0.78rem;
             overflow: hidden;
-            width: 4.62rem;
             border-radius: 0.8rem;
-            margin: 0 auto;
             background-color: rgba(255, 255, 255, 0.16);
             input {
                 background-color: transparent;
@@ -26,6 +27,9 @@
                 font-size: 0.26rem;
                 line-height: 0.3rem;
                 color: #fff;
+                padding: 0;
+                border:none;
+                height: 0.3rem;
                 margin: 0.15rem 0;
                 letter-spacing: 0.02rem;
             }
@@ -57,20 +61,13 @@
             }
         }
         .screen {
-            position: absolute;
-            top: 0.28rem;
-            left: 0;
-            text-align: center;
-            font-size: 0;
-            width: 1.44rem;
-            height: 0.32rem;
+            padding: 0 0.2rem;
+            margin-right: 0.1rem;
             span {
                 display: inline-block;
-                vertical-align: bottom;
             }
             .screen_text {
                 font-size: 0.3rem;
-                line-height: 0.32rem;
                 color: #fff;
             }
             .screen_icon {
@@ -78,16 +75,24 @@
                 height: 0.12rem;
                 background: url(../img/xiala.png);
                 background-size: 100% 100%;
-                margin-left: 0.06rem;
+            }
+        }
+        .search_btn_box{
+            .search_btn{
+                display: inline-block;
+                line-height: 0.9rem;
+                padding: 0 0.2rem;
+                color: #FFFFFF;
+                font-size: 0.3rem;
             }
         }
     }
     .body_box {
-        .list_wrapper {
-            padding: 0 0.2rem;
-            .list {
-                padding: 0.3rem 0;
+        .user_list {
+            .user_item {
+                padding: 0.3rem 0.2rem;
                 border-bottom: 1px solid #EEEEEE;
+                background: #FFFFFF;
                 .img_wrapper {
                     float: left;
                     width: 1.67rem;
@@ -182,6 +187,158 @@
                             .shop_connect_phone {
                                 color: #7D7D7D;
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.regional_order_list_box{
+    padding-top: 1.9rem;
+    box-sizing: border-box;
+    .tabbar {
+        position: fixed;
+        top: 0.9rem;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 1rem;
+        background: #FFFFFF;
+        z-index: 10;
+        overflow-x: scroll;
+        .tab_item {
+            min-width: 1.4rem;
+            line-height: 1rem;
+            background: #FFFFFF;
+            font-size: 0.32rem;
+            color: #333333;
+            text-align: center;
+            &.on {
+                color: #F65F52;
+                position: relative;
+            }
+            &.on:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                margin-left: -0.3rem;
+                width: 0.6rem;
+                height: 0.06rem;
+                background: #F5633A;
+                border-radius: 0.06rem;
+            }
+        }
+    }
+    .body_box {
+        font-size: 0.32rem;
+        .mui-scroll-wrapper {
+            top: 1.9rem;
+        }
+        .order_list_box {
+            .order_list {
+                .order_item {
+                    background: #fff;
+                    &:not(:last-child){
+                        margin-bottom: 0.1rem;
+                    }
+                    .top_info {
+                        height: 2.2rem;
+                        padding: 0.2rem;
+                        box-sizing: border-box;
+                        border-bottom: 1px solid #eee;
+                        display: flex;
+                        justify-content: space-between;
+                        .img_box {
+                            img {
+                                width: 1.8rem;
+                                height: 1.8rem;
+                            }
+                        }
+                        .center_info {
+                            flex: 1;
+                            width: 3.5rem;
+                            height: 1.8rem;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            padding: 0 0.1rem;
+                            line-height: 0.45rem;
+                            .center_title {
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                            }
+                            .center_count {
+                                font-size: 0.26rem;
+                                color: #7D7D7D;
+                            }
+                            .center_status {
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                font-size: 0.26rem;
+                            }
+                            .center_address_countdown{
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                .address{
+                                    flex: 1;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    overflow: hidden;
+                                    font-size: 0.26rem;
+                                }
+                                .countdown{
+                                    width: 1.6rem;
+                                    .time{
+                                        vertical-align: middle;
+                                        display: inline-block;
+                                        width: 0.36rem;
+                                        height: 0.36rem;
+                                        line-height: 0.36rem;
+                                        border-radius:0.1rem;
+                                        text-align: center;
+                                        background: rgba(0,0,0,.5);
+                                        color: #FFFFFF;
+                                        font-size: 0.2rem;
+                                    }
+                                    .point{
+                                        font-size: 0.2rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .bottom_btns {
+                        height: 0.9rem;
+                        padding: 0 0.2rem;
+                        box-sizing: border-box;
+                        font-size: 0.28rem;
+                        .b_btn {
+                            margin-top: 0.15rem;
+                            width: 1.6rem;
+                            height: 0.6rem;
+                            color: #434040;
+                            border: 1px solid #434040;
+                            border-radius: 1rem;
+                            background: #FFFFFF;
+                        }
+                        .r_btn {
+                            margin-top: 0.15rem;
+                            margin-left: 0.2rem;
+                            width: 1.6rem;
+                            height: 0.6rem;
+                            color: #FD4343;
+                            border: 1px solid #FD4343;
+                            border-radius: 1rem;
+                            background: #FFFFFF;
                         }
                     }
                 }

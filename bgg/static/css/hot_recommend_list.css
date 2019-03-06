@@ -24,11 +24,13 @@
 .content_box .body_box .recommend_list_box .recommend_list .recommend_item .top_banner .img_box {
   width: 7.1rem;
   height: 3.3rem;
+  overflow: hidden;
 }
 .content_box .body_box .recommend_list_box .recommend_list .recommend_item .top_banner .img_box img {
   display: block;
   width: 100%;
-  height: 100%;
+  margin-top: 1.65rem;
+  transform: translateY(-50%);
 }
 .content_box .body_box .recommend_list_box .recommend_list .recommend_item .top_banner .order_num {
   position: absolute;

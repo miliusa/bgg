@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="LS">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../../static/css/share.css" />
+    <link rel="stylesheet" href="../../../static/css/order_detail.css" />
+    <title>退换货详情</title>
+  </head>
+
+  <body>
+    <div class="content_box">
+      <div class="head_box white">
+        <i class="head_left_icon"></i>
+        <div class="head_title">退换货 </div>
+      </div>
+      <div class="body_box">
+      	<div class="return_desc">
+      		<div class="text return_reason_select clear">
+      			<span class="fl">退款原因</span>
+      			<span class="fr color_999">其他原因</span>
+      		</div>
+      		<p class="text">退款金额: <span class="return_price price_color">￥108.00</span></p>
+      	</div>
+      	<div class="return_status">
+      		<p class="return_status_text">当前进度：平台审核</p>
+      	</div>
+      	<div class="default_btn_box">
+      		<button class="default_btn active">确定</button>
+      	</div>
+      </div>
+    </div>
+    <script src="../../../static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../../static/js/share.js"></script>
+    <script src="../../../static/js/client/return_goods_status.js"></script>
+  </body>
+
+</html>

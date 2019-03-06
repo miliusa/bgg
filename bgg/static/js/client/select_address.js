@@ -25,7 +25,7 @@ $(function(){
                             <div class="info">\
                                 <div class="info_text">\
                                     <div class="info_user">' + item.realname + ' ' + item.mobile + '</div>\
-                                    <div class="address_center">' + item.cityname + '' + item.address + '</div>\
+                                    <div class="address_center">' + item.provincename + ' ' + item.cityname + ' ' + item.areaname + ' ' + item.address + '</div>\
                                 </div>\
                             </div>\
                         </div>'

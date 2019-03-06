@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="MXY">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>提现到银行卡</title>
+    <link href="../../../static/css/share.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/withdraw.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="content_box">
+    <div class="head_box white">
+        <i class="head_left_icon"></i>
+        <div class="head_title">提现到银行卡 </div>
+    </div>
+    <div class="body_box">
+        <!--<div class="accoutn_info">
+            <div class="account_box">
+                <div class="label">银行卡号</div>
+                <div class="text">
+                    <input class="account_value" type="text" placeholder="请输入银行卡号" name="bank_account"/>
+                </div>
+            </div>
+            <div class="account_box">
+                <div class="label">姓名</div>
+                <div class="text">
+                    <input class="account_value" type="text" placeholder="请输入姓名" name="name"/>
+                </div>
+            </div>
+            <div class="account_box">
+                <div class="label">手机号</div>
+                <div class="text">
+                    <input class="account_value" type="text" placeholder="请输入手机号" name="phone"/>
+                </div>
+            </div>
+            <div class="account_box">
+                <div class="label">开户行</div>
+                <div class="text">
+                    <input class="account_value" type="text" placeholder="请输入开户行" name="bank_name"/>
+                </div>
+            </div>
+        </div>-->
+        <p class="title">提现金额</p>
+        <div class="content clear">
+            <span class="content_icon">¥</span>
+            <div class="content_text">
+                <input name="price" type="number" placeholder="0.00" />
+            </div>
+        </div>
+        <p class="des">* 可提现佣金：<span name="commissions"></span>元</p>
+        <p class="des">* 提现金额必须为100的倍数</p>
+        <p class="des">* 提现手续费为<span name="fee"></span>%</p>
+        <button class="default_btn active">确定</button>
+    </div>
+</div>
+<script src="../../../static/js/jquery-1.11.0.min.js"></script>
+<script src="../../../static/js/share.js"></script>
+<script src="../../../static/js/client/withdraw_detail.js"></script>
+</body>
+</html>

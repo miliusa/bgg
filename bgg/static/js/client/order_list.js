@@ -49,6 +49,7 @@ $(function(){
 	});
 
 	$('.tabbar').on('click', '.tab_item', function(){
+		loading()
 		$(this).addClass('on').siblings().removeClass('on');
 		var index = $(this).index();
 		// 全部
@@ -101,7 +102,7 @@ $(function(){
 					var html = '';
 					$.each(res.data, function(index, item){
 						var status = item.status;
-						var statusText = status == 0?'待付款':(status == 2 && item.isshipments == 0) || status == 1?'待发货':status == 2  && item.isshipments == 1?'待收货':status == 4?'已完成':'';
+						var statusText = status == 0?'待付款':(status == 2 && item.isshipments == 0) || status == 1?'待接单':status == 2  && item.isshipments == 1?'待收货':status == 4?'已完成':'';
 						html += '<div class="order_item" data-id="' + item.id + '">\
 									<p class="ordersn">订单编号: <span>' + item.ordersn + '</span></p>'
 						$.each(item.ordergoods, function(index1, item1){
@@ -128,7 +129,6 @@ $(function(){
 									</div>';
 						}else if((status == 2 && item.isshipments == 0) || status == 1){
 							html += '<div class="bottom_btns clear">\
-										<button class="r_btn active remind fr">提醒发货</button>\
 										<button class="b_btn active server fr">申请维权</button>\
 									</div>'
 						}else if(status == 2  && item.isshipments == 1){
@@ -141,7 +141,7 @@ $(function(){
 							if(item.iscomment == 0){
 								html += '<button class="r_btn active rate fr">评价</button>'
 							}else{
-								html += '<button class="r_btn active view_detail fr">查看详情</button>'
+								html += '<button class="r_btn view_rate fr">查看评价</button>'
 							}
 							html += '<button class="b_btn active server fr">申请维权</button>\
 									</div>'
@@ -256,7 +256,7 @@ $(function(){
 	});
 
 	// 提醒发货
-	$('.order_list').on('click', '.remind.active', function () {
+	/*$('.order_list').on('click', '.remind.active', function () {
 		var id = $(this).closest('.order_item').attr('data-id');
 		var $self = $(this)
 		$self.removeClass('active')
@@ -288,7 +288,7 @@ $(function(){
 				blackHiht('网络错误')
 			}
 		})
-	});
+	});*/
 
 	// 申请维权
 	$('.order_list').on('click', '.server.active', function () {
@@ -321,8 +321,8 @@ $(function(){
 							res = resstr;
 						}
 						if(res.code == 200){
-							$self.closest('.order_item').remove()
 							blackHiht('收货成功')
+							rate(id)
 						}else{
 							blackHiht(res.message)
 						}
@@ -339,15 +339,43 @@ $(function(){
 		)
 	});
 
+	function rate(id){
+		$.ajax({
+			url: _apiUrl + 'public/bgg/index/user/orderdetail',
+			beforeSend: function (request) {
+				request.setRequestHeader("token", getUserToken())
+			},
+			data: {
+				id: id
+			},
+			success: function (resstr) {
+				var res = null;
+				if (typeof resstr.result == "undefined") {
+					res = JSON.parse(resstr);
+				} else {
+					res = resstr;
+				}
+				if(res.code == 200){
+					doComment(JSON.stringify(res.data))
+				}else{
+					blackHiht(res.message)
+				}
+			},
+			error: function(){
+				blackHiht('网络错误')
+			}
+		})
+	}
+
 	// 评价
 	$('.order_list').on('click', '.rate.active', function () {
 		var id = $(this).closest('.order_item').attr('data-id');
-		doComment(id)
+		rate(id)
 	});
 
-	$('.order_list').on('click', '.view_detail', function () {
+	$('.order_list').on('click', '.view_rate', function () {
 		var id = $(this).closest('.order_item').attr('data-id');
-		location.href = 'order_detail.html?from=web&id=' + id
+		location.href = 'rate_detail.html?from=web&id=' + id
 	})
 
 });

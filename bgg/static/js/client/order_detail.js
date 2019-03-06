@@ -1,6 +1,7 @@
 $(function () {
   loading()
   var id = getUrl('id')
+  var info = ''
   $.ajax({
     url: _apiUrl + 'public/bgg/index/user/orderdetail',
     beforeSend: function (request) {
@@ -19,6 +20,7 @@ $(function () {
         res = resstr;
       }
       if(res.code == 200){
+        info = res.data
         // 商品详情
         var html = ''
         $.each(res.data.ordergoods, function (index, item) {
@@ -57,10 +59,16 @@ $(function () {
           btnhtml = '<button class="r_btn active pay fr">立即付款</button>\
                   <button class="b_btn active cancel fr">取消订单</button>';
         }else if((status == 2 && res.data.isshipments == 0) || status == 1){
+          $('.return_code').show()
+          $('.return_code span').text(res.data.ordersn_code)
+          new QRCode(document.getElementById('qrcode'), res.data.ordersn_code)
           $('.pay_time').text('付款时间：' + getTime(res.data.paytime))
-          btnhtml = '<button class="r_btn active remind fr">提醒发货</button>\
-                  <button class="b_btn active server fr">申请维权</button>'
+          /*<button class="r_btn active remind fr">提醒发货</button>\*/
+          btnhtml = '<button class="b_btn active server fr">申请维权</button>'
         }else if(status == 2 && res.data.isshipments == 1){
+          $('.return_code').show()
+          $('.return_code span').text(res.data.ordersn_code)
+          new QRCode(document.getElementById('qrcode'), res.data.ordersn_code)
           $('.pay_time').text('付款时间：' + getTime(res.data.paytime))
           $('.translate_time').text('发货时间：' + getTime(res.data.receivetime))
           $('.deliver_info .address').text(res.data.provincename + res.data.cityname + res.data.areaname + res.data.address)
@@ -71,11 +79,16 @@ $(function () {
           btnhtml = '<button class="r_btn active confirm_recive fr">确认收货</button>\
                   <button class="b_btn active server fr">申请维权</button>'
         }else if(status == 4){
+          $('.return_code').show()
+          $('.return_code span').text(res.data.ordersn_code)
+          new QRCode(document.getElementById('qrcode'), res.data.ordersn_code)
           $('.pay_time').text('付款时间：' + getTime(res.data.paytime))
           $('.translate_time').text('发货时间：' + getTime(res.data.receivetime))
           $('.complete_time').text('成交时间：' + getTime(res.data.receivedtime))
           if(res.data.iscomment == 0){
             btnhtml = '<button class="r_btn active rate fr">评价</button>'
+          }else{
+            btnhtml = '<button class="r_btn view_rate fr">查看评价</button>'
           }
           btnhtml += '<button class="b_btn active server fr">申请维权</button>'
         }
@@ -117,8 +130,8 @@ $(function () {
                 res = resstr;
               }
               if(res.code == 200){
-                $self.closest('.order_item').remove()
-                blackHiht('成功')
+                blackHiht('取消成功')
+                history.back()
               }else{
                 blackHiht(res.message)
               }
@@ -142,7 +155,7 @@ $(function () {
   });
 
   // 提醒发货
-  $('.btn_box').on('tap', '.remind.active', function () {
+  /*$('.btn_box').on('tap', '.remind.active', function () {
     var $self = $(this)
     $self.removeClass('active')
     $.ajax({
@@ -173,7 +186,7 @@ $(function () {
         blackHiht('网络错误')
       }
     })
-  });
+  });*/
 
   // 申请维权
   $('.btn_box').on('tap', '.server.active', function () {
@@ -205,7 +218,7 @@ $(function () {
               }
               if(res.code == 200){
                 blackHiht('收货成功')
-                location.reload()
+                doComment(JSON.stringify(info))
               }else{
                 blackHiht(res.message)
               }
@@ -224,6 +237,11 @@ $(function () {
 
   // 评价
   $('.btn_box').on('tap', '.rate.active', function () {
-    doComment(id)
+    doComment(JSON.stringify(info))
   });
+
+  // 查看评价
+  $('.btn_box').on('tap', '.view_rate', function () {
+    location.href = 'rate_detail.html?from=web&id=' + id
+  })
 })

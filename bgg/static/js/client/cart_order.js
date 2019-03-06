@@ -28,7 +28,6 @@ $(function(){
 				if(res.code == 200){
 					// 库存
 					// 用户地址信息
-
 					if(res.data.defaultaddress == ''){
 						$('.tips').show()
 					}else{
@@ -62,7 +61,8 @@ $(function(){
 					// 合计
 					$('[name=pay_price]').text(res.data.price);
 				}else{
-					blackHiht(res.message)
+					// blackHiht(res.message)
+					app.appCancelPay()
 				}
 				loadend()
 			},
@@ -109,40 +109,46 @@ $(function(){
 
 	//立即支付
 	$('.foot').on('tap','.foot_btn.active', function(){
-		$(this).removeClass('active')
+		var $self = $(this)
+		$self.removeClass('active')
 		var remark = $('[name=remark]').val();
-		$.ajax({
-			url: _apiUrl + 'public/bgg/index/user/submitbuycart',
-			beforeSend: function(request){
-				request.setRequestHeader("token", getUserToken())
-			},
-			data: {
-				carts: cartText,
-				remark: remark,
-				addressid: addressid,
-				couponid: couponid
-			},
-			dataType: 'JSON',
-			type: 'POST',
-			success: function (resstr) {
-				var res = null;
-				if (typeof resstr.result == "undefined") {
-					res = JSON.parse(resstr);
-				} else {
-					res = resstr;
+		if(!addressid){
+			blackHiht('请选择收货地址')
+		}else{
+			$.ajax({
+				url: _apiUrl + 'public/bgg/index/user/submitbuycart',
+				beforeSend: function(request){
+					request.setRequestHeader("token", getUserToken())
+				},
+				data: {
+					carts: cartText,
+					remark: remark,
+					addressid: addressid,
+					couponid: couponid
+				},
+				dataType: 'JSON',
+				type: 'POST',
+				success: function (resstr) {
+					var res = null;
+					if (typeof resstr.result == "undefined") {
+						res = JSON.parse(resstr);
+					} else {
+						res = resstr;
+					}
+					if(res.code == 200){
+						location.href = 'pay_type.html?from=web&orderid=' + res.data.id
+					}else{
+						blackHiht(res.message)
+					}
+					$self.addClass('active')
+				},
+				error: function () {
+					blackHiht('网络错误')
+					$self.addClass('active')
 				}
-				if(res.code == 200){
-					location.href = 'pay_type.html?from=web&orderid=' + res.data.id
-				}else{
-					blackHiht(res.message)
-				}
-				$(this).addClass('active')
-			},
-			error: function () {
-				blackHiht('网络错误')
-				$(this).addClass('active')
-			}
-		});
+			});
+		}
+
 	})
 
 	// 选择优惠券

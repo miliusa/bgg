@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en" style="font-size:70px;">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>商品详情</title>
+	</head>
+	<link rel="stylesheet" href="../../../static/css/swiper.min.css">
+	<link rel="stylesheet" href="../../../static/css/share.css">
+	<link rel="stylesheet" href="../../../static/css/deal.css">
+
+	<body>
+		<div class="content_box foot_box">
+			<div class="head_box">
+				<i class="head_left_icon"></i>
+				<div class="head_title">商品详情</div>
+			</div>
+			<div class="body_box">
+				<!--banner轮播图-->
+				<div class="banner_window">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<!--<div class="swiper-slide">
+								<img src="../../../static/img/banner1.png">
+							</div>
+							<div class="swiper-slide">
+								<img src="../../../static/img/banner1.png">
+							</div>
+							<div class="swiper-slide">
+								<img src="../../../static/img/banner1.png">
+							</div>-->
+						</div>
+						<!-- Add Pagination -->
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+				<!--商品信息-->
+				<div class="deal_msg_box">
+					<div class="deal_text"></div>
+					<!--<div class="deal_price">￥<span class="price_num" name="dealPrice"></span></div>-->
+					<div class="deal_sales_box">
+						<!--<div class="expressage">快递：<span name="expressageNum">0.00</span></div>-->
+						<div class="deal_price fl">￥<span class="price_num" name="dealPrice"></span></div>
+						<div class="deal_sales">销量：<span name="salesNum"></span>件</div>
+					</div>
+				</div>
+				<div class="discuss_head_box">
+					<div class="discuss_head_list active">商品参数</div>
+					<div class="discuss_head_list rate">商品评价()</div>
+				</div>
+				<div class="discuss_content">
+					<div class="discuss_content_list desc active">
+						<!--<div class="deal_msg_list">
+							<div class="deal_msg_tabel">品牌</div>
+							<div class="deal_msg_text">BEINGMATE/贝英美</div>
+						</div>
+						<div class="deal_msg_list">
+							<div class="deal_msg_tabel">适用阶段</div>
+							<div class="deal_msg_text">三段</div>
+						</div>
+						<div class="deal_msg_list">
+							<div class="deal_msg_tabel">销售地</div>
+							<div class="deal_msg_text">中国大陆</div>
+						</div>
+						<div class="deal_msg_list">
+							<div class="deal_msg_tabel">原产地</div>
+							<div class="deal_msg_text">中国</div>
+						</div>
+						<div class="deal_msg_list">
+							<div class="deal_msg_tabel">重量(g)</div>
+							<div class="deal_msg_text">2000</div>
+						</div>-->
+					</div>
+					<div class="discuss_content_list rate">
+						<!--<div class="deal_discuss_list">
+							<div class="discuss_user_head">
+								<img src="../../../static/img/userHead.png">
+								<div class="discuss_user_name">大牛</div>
+							</div>
+							<div class="discuss_text">小王子豆浆直播间买的，质量很好，孩子很喜欢喝，就是孩子最近好像脑袋变大了。</div>
+							<div class="discuss_time">2018-07-06</div>
+						</div>
+						<div class="deal_discuss_list">
+							<div class="discuss_user_head">
+								<img src="../../../static/img/userHead.png">
+								<div class="discuss_user_name">二牛</div>
+							</div>
+							<div class="discuss_text">小王子豆浆直播间买的，质量很好，孩子很喜欢喝，就是孩子最近好像脑袋变大了。</div>
+							<div class="discuss_time">2018-07-06</div>
+						</div>
+						<div class="deal_discuss_list">
+							<div class="discuss_user_head">
+								<img src="../../../static/img/userHead.png">
+								<div class="discuss_user_name">三牛</div>
+							</div>
+							<div class="discuss_text">小王子豆浆直播间买的，质量很好，孩子很喜欢喝，就是孩子最近好像脑袋变大了。</div>
+							<div class="discuss_img_list_box">
+								<div class="discuss_img_list">
+									<div class="discuss_img_box">
+										<img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/test1.jpg">
+									</div>
+								</div>
+							</div>
+							<div class="discuss_time">2018-07-06</div>
+						</div>
+						<a href="rate_list.html" class="all_discuss_btn">查看更多评价</a>-->
+					</div>
+				</div>
+				<div class="deal_img_box">
+					<!--<img src="../../../static/img/detailImg.png">-->
+				</div>
+			</div>
+			<div class="deal_footer_box">
+				<a href="javascript:;" class="deal_footer_list1 kefu">
+					<i class="icon_kefu"></i>
+					<div class="deal_footer_list_text">客服</div>
+				</a>
+				<a href="javascript:;" class="deal_footer_list1 cart">
+					<i class="icon_shp_car"></i>
+					<div class="deal_footer_list_text">购物车</div>
+				</a>
+				<div class="deal_footer_list2 join_car_btn">加入购物车</div>
+				<div class="deal_footer_list2 buy_btn">立即购买</div>
+			</div>
+			<!--选择商品类型弹出框-->
+			<div class="style_modal_box">
+				<div class="style_content">
+					<div class="style_modal_head">
+						<div class="style_modal_img">
+							<img src="../../../static/img/banner1.png">
+						</div>
+						<div class="style_modal_msg">
+							<div class="style_modal_price">￥<span name="dealPrice"></span></div>
+							<div class="style_modal_text">库存<span name="surplus"></span>件</div>
+							<div class="style_modal_text">选择 <span name="deal_style">颜色分类,型号</span></div>
+						</div>
+						<i class="icon_modal_close"></i>
+					</div>
+					<div class="style_modal_body">
+						<!--<div class="style_list">
+							<div class="style_title">颜色分类</div>
+							<div class="style_text_box">
+								<div class="style_text_list active" data-code="1">红色</div>
+								<div class="style_text_list" data-code="2">绿色</div>
+								<div class="style_text_list" data-code="3">蓝色</div>
+								<div class="style_text_list" data-code="4">黄色</div>
+							</div>
+						</div>
+						<div class="style_list">
+							<div class="style_title">型号</div>
+							<div class="style_text_box">
+								<div class="style_text_list" data-code="1">大头</div>
+								<div class="style_text_list" data-code="2">超大头</div>
+								<div class="style_text_list" data-code="3">特大头</div>
+							</div>
+						</div>-->
+						<div class="style_list">
+							<div class="style_num_left">购买数量</div>
+							<div class="style_num_right">
+								<i class="icon_add"></i>
+								<input type="text" readonly="readonly" value="1" class="deal_num">
+								<i class="icon_minus"></i>
+							</div>
+						</div>
+					</div>
+					<div class="style_modal_footer">
+						<button type="button" class="style_modal_btn">确定</button>
+					</div>
+				</div>
+				<div class="black_bg"></div>
+			</div>
+		</div>
+		<script src="../../../static/js/jquery-1.11.0.min.js"></script>
+		<script src="../../../static/js/haoniu-lazy-load.js"></script>
+		<script src="../../../static/js/swiper.min.js"></script>
+		<script src="../../../static/js/share.js"></script>
+		<script src="../../../static/js/client/deal_details.js"></script>
+	</body>
+
+</html>

@@ -11,6 +11,7 @@ $(function(){
 		isdiscounts = getUrl('isdiscounts')
 	}
 	var keywords = ''
+	$('.keyword_input').val(keywords)
 	var orderby = '';
 	var page = 1;
 	var pagesize = 10;
@@ -75,7 +76,7 @@ $(function(){
 					loadall = false;
 					if(res.data == '' || res.data.length < pagesize){
 						loadall = true;
-						blackHiht('没有更多数据了')
+						// blackHiht('没有更多数据了')
 					}
 					if(page == 1){
 						if(res.data == ''){
@@ -103,7 +104,7 @@ $(function(){
 	function pullupRefresh() {
 		if(loadall){
 			mui('#pullrefresh').pullRefresh().endPullupToRefresh();
-			blackHiht('没有更多数据了');
+			// blackHiht('没有更多数据了');
 			$('.mui-pull-bottom-pocket').css('display', 'none');
 			return
 		}else{
@@ -124,6 +125,11 @@ $(function(){
 		keywords = $('.keyword_input').val()
 		pulldownRefresh()
 	})
+	$("#keywords").bind("search", function() {
+		//要执行的方法
+		keywords = $('.keyword_input').val()
+		pulldownRefresh()
+	});
 
 	var categoryList = [];
 	// 筛选商品分类初始化

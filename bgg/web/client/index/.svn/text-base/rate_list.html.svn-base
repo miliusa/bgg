@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="LS">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../../static/css/mui.min.css">
+    <link rel="stylesheet" href="../../../static/css/share.css" />
+    <link rel="stylesheet" href="../../../static/css/rate_list.css" />
+    <title>评价列表</title>
+  </head>
+
+  <body>
+    <div class="content_box">
+      <div class="head_box">
+        <i class="head_left_icon"></i>
+        <div class="head_title">商品评价</div>
+      </div>
+      <div class="body_box">
+        <!--下拉刷新容器-->
+        <div id="pullrefresh" class="mui-content mui-scroll-wrapper rate_list_box">
+          <div class="mui-scroll">
+            <!--数据列表-->
+            <div class="mui-table-view mui-table-view-chevron rate_list">
+              <!-- <div class="rate_item">
+              <div class="user_info clear">
+              	<div class="avatar_box fl">
+              		<img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/userHead.png" />
+              	</div>
+              	<span class="user_nickname fl">smile**angry</span>
+              </div>
+              <p class="rate_time color_999">2018-06-26</p>
+              <div class="rate_info">
+                <p class="rate_text">穿起来很好看的，就是鞋口对小朋友们来说有点 紧，自己穿上去有点困难，穿穿估计会松一-些吧 ~相对三宝的别的鞋子来说这个是最好清洁的一双 了，随便刷刷就干净了~</p>
+                <div class="rate_img_list clear">
+                  <div class="img_box fl">
+                    <img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/test3.jpg" />
+                  </div>
+                  <div class="img_box fl">
+                    <img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/test3.jpg" />
+                  </div>
+                  <div class="img_box fl">
+                    <img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/test3.jpg" />
+                  </div>
+                </div>
+              </div>
+            </div>-->
+            </div>
+          </div>
+        </div>
+        <!--<div class="rate_list_box">
+          <div class="rate_list">
+            &lt;!&ndash;<div class="rate_item">
+              <div class="user_info clear">
+              	<div class="avatar_box fl">
+              		<img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/userHead.png" />
+              	</div>
+              	<span class="user_nickname fl">smile**angry</span>
+              </div>
+              <p class="rate_time color_999">2018-06-26</p>
+              <div class="rate_info">
+                <p class="rate_text">穿起来很好看的，就是鞋口对小朋友们来说有点 紧，自己穿上去有点困难，穿穿估计会松一-些吧 ~相对三宝的别的鞋子来说这个是最好清洁的一双 了，随便刷刷就干净了~</p>
+                <div class="rate_img_list clear">
+                  <div class="img_box fl">
+                    <img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/test3.jpg" />
+                  </div>
+                  <div class="img_box fl">
+                    <img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/test3.jpg" />
+                  </div>
+                  <div class="img_box fl">
+                    <img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/test3.jpg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rate_item">
+              <div class="user_info clear">
+              	<div class="avatar_box fl">
+              		<img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/userHead.png" />
+              	</div>
+              	<span class="user_nickname fl">smile**angry</span>
+              </div>
+              <p class="rate_time color_999">2018-06-26</p>
+              <div class="rate_info">
+                <p class="rate_text">穿起来很好看的，就是鞋口对小朋友们来说有点 紧，自己穿上去有点困难，穿穿估计会松一-些吧 ~相对三宝的别的鞋子来说这个是最好清洁的一双 了，随便刷刷就干净了~</p>
+                <div class="rate_img_list clear">
+                  <div class="img_box fl">
+                    <img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/test3.jpg" />
+                  </div>
+                  <div class="img_box fl">
+                    <img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/test3.jpg" />
+                  </div>
+                  <div class="img_box fl">
+                    <img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/test3.jpg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rate_item">
+              <div class="user_info clear">
+              	<div class="avatar_box fl">
+              		<img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/userHead.png" />
+              	</div>
+              	<span class="user_nickname fl">smile**angry</span>
+              </div>
+              <p class="rate_time color_999">2018-06-26</p>
+              <div class="rate_info">
+                <p class="rate_text">穿起来很好看的，就是鞋口对小朋友们来说有点 紧，自己穿上去有点困难，穿穿估计会松一-些吧 ~相对三宝的别的鞋子来说这个是最好清洁的一双 了，随便刷刷就干净了~</p>
+                <div class="rate_img_list clear">
+                  <div class="img_box fl">
+                    <img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/test3.jpg" />
+                  </div>
+                  <div class="img_box fl">
+                    <img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/test3.jpg" />
+                  </div>
+                  <div class="img_box fl">
+                    <img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/test3.jpg" />
+                  </div>
+                </div>
+              </div>
+            </div>&ndash;&gt;
+          </div>
+        </div>-->
+      </div>
+    </div>
+    <script src="../../../static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../../static/js/mui.min.js"></script>
+    <script src="../../../static/js/haoniu-lazy-load.js"></script>
+    <script src="../../../static/js/share.js"></script>
+    <script src="../../../static/js/client/rate_list.js"></script>
+  </body>
+
+</html>

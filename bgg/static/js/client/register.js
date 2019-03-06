@@ -39,6 +39,7 @@ $(function () {
                         res = resstr;
                     }
                     if(res.code == 200){
+                        blackHiht('发送成功,请注意查收')
                         var seconds = 60
                         var timer = setInterval(function () {
                             seconds--
@@ -109,6 +110,7 @@ $(function () {
                     }
                     if(res.code == 200){
                         blackHiht('注册成功')
+                        location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.haoniu.beiguagua'
                     }else{
                         blackHiht(res.message)
                     }

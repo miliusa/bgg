@@ -26,8 +26,7 @@ $(function () {
                     $('.default_btn_box .default_btn').text('取消退款')
                     $('.default_btn_box .default_btn').addClass('cancel_apply')
                 }else{
-                    $('.default_btn_box .default_btn').text('确定')
-                    $('.default_btn_box .default_btn').addClass('know')
+                    $('.default_btn_box .default_btn').hide()
                 }
             }else{
                 blackHiht(res.message)

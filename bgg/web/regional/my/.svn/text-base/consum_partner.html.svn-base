@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="MXY">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>合伙人</title>
+    <link rel="stylesheet" href="../../../static/css/mui.min.css">
+    <link href="../../../static/css/share.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/consum.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="content_box">
+      <div class="title">
+        <div class="screen">
+          <span class="screen_text">筛选</span>
+          <span class="screen_icon"></span>
+        </div>
+        <div class="input">
+          <i class="search_icon"></i>
+          <input name="keywords" type="text" placeholder="输入商家名/ID" />
+        </div>
+        <div class="search_btn_box">
+          <span class="search_btn active">搜索</span>
+        </div>
+      </div>
+      <div class="body_box">
+        <!--下拉刷新容器-->
+        <div id="pullrefresh" class="mui-content mui-scroll-wrapper shop_list_box">
+          <div class="mui-scroll">
+            <!--数据列表-->
+            <div class="mui-table-view mui-table-view-chevron shop_list">
+              <!-- <div class="shop_item clear">
+                    <div class="fl shop_img">
+                      <img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/test1.jpg" />
+                    </div>
+                    <div class="fr shop_desc">
+                      <p class="shop_name text_ellipsis_1">店铺名称：贝因美</p>
+                      <p class="shop_id text_ellipsis_1">店铺ID：32422</p>
+                      <p class="shop_connect_name text_ellipsis_1">联系人： 李某某</p>
+                      <div class="connect_phone clear">
+                        <p class="shop_connect_phone text_ellipsis_1 fl">联系方式：13084736284</p>
+                        <span class="status fr">申请中</span>
+                      </div>
+                    </div>
+                  </div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../../../static/js/mui.min.js"></script>
+    <script src="../../../static/js/share.js"></script>
+    <script src="../../../static/js/haoniu-lazy-load.js"></script>
+    <script src="../../../static/js/regional/consum_partner.js"></script>
+  </body>
+
+</html>

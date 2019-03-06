@@ -1,3 +1,8 @@
+.content_box {
+  background: #FFFFFF;
+  min-height: 100vh;
+  padding-top: 0.9rem;
+}
 .content_box .title {
   height: 0.9rem;
   position: fixed;
@@ -6,13 +11,14 @@
   width: 100%;
   border-bottom: 1px solid #ececec;
   box-sizing: border-box;
+  background: #FFFFFF;
 }
 .content_box .title .input {
   position: relative;
   box-sizing: border-box;
   padding-left: 0.78rem;
   overflow: hidden;
-  width: 4.62rem;
+  width: 5rem;
   border-radius: 0.8rem;
   margin: 0.15rem auto;
   background-color: #EFF1F2;
@@ -25,6 +31,22 @@
   line-height: 0.3rem;
   color: #989898;
   margin: 0.15rem 0;
+  padding: 0;
+  border: none;
+  height: 0.3rem;
+  letter-spacing: 0.02rem;
+}
+.content_box .title .input input::-webkit-input-placeholder {
+  font-size: 0.26rem;
+}
+.content_box .title .input input:-moz-placeholder {
+  font-size: 0.26rem;
+}
+.content_box .title .input input::-moz-placeholder {
+  font-size: 0.26rem;
+}
+.content_box .title .input input:-ms-input-placeholder {
+  font-size: 0.26rem;
 }
 .content_box .title .input .search_icon {
   position: absolute;
@@ -58,20 +80,23 @@
   height: 0.9rem;
   line-height: 0.9rem;
   font-size: 0.3rem;
-  color: #555;
+  color: #666;
 }
-.content_box .body_box .history {
+.content_box .body_box .history_box {
+  display: none;
+}
+.content_box .body_box .history_box .history {
   padding-left: 0.29rem;
   font-size: 0.26rem;
   line-height: 0.37rem;
   color: #909090;
   margin: 0.35rem 0 0.2rem 0;
 }
-.content_box .body_box .content {
+.content_box .body_box .history_box .content {
   padding-left: 0.22rem;
   font-size: 0;
 }
-.content_box .body_box .content span {
+.content_box .body_box .history_box .content span {
   display: inline-block;
   vertical-align: top;
   border-radius: 0.12rem;
@@ -82,59 +107,105 @@
   background-color: #EBEBEB;
   margin: 0 0.22rem 0.22rem 0;
 }
-.content_box .body_box .center .list_wrapper {
-  padding: 0 0.2rem;
+.content_box .body_box .mui-scroll-wrapper {
+  top: 0.9rem;
 }
-.content_box .body_box .center .list_wrapper .list {
-  padding: 0.3rem 0;
-  border-bottom: 1px solid #e1e1e1;
+.content_box .body_box .order_list_box .order_list .order_item {
+  background: #fff;
 }
-.content_box .body_box .center .list_wrapper .list .img_wrapper {
-  float: left;
-  width: 1.67rem;
-  height: 1.67rem;
-  margin-right: 0.2rem;
-  background-color: #fff;
+.content_box .body_box .order_list_box .order_list .order_item:not(:last-child) {
+  margin-bottom: 0.1rem;
 }
-.content_box .body_box .center .list_wrapper .list .img_wrapper img {
-  width: 100%;
-  height: 100%;
+.content_box .body_box .order_list_box .order_list .order_item .top_info {
+  height: 2.2rem;
+  padding: 0.2rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
 }
-.content_box .body_box .center .list_wrapper .list .text_wrapper {
-  overflow: hidden;
+.content_box .body_box .order_list_box .order_list .order_item .top_info .img_box img {
+  width: 1.8rem;
+  height: 1.8rem;
 }
-.content_box .body_box .center .list_wrapper .list .text_wrapper .title_name {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 0.32rem;
+.content_box .body_box .order_list_box .order_list .order_item .top_info .center_info {
+  flex: 1;
+  width: 3.5rem;
+  height: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0.1rem;
   line-height: 0.45rem;
 }
-.content_box .body_box .center .list_wrapper .list .text_wrapper .label {
-  margin-right: 0.16rem;
-  float: left;
-}
-.content_box .body_box .center .list_wrapper .list .text_wrapper .text {
-  overflow: hidden;
-  text-overflow: ellipsis;
+.content_box .body_box .order_list_box .order_list .order_item .top_info .center_info .center_title {
   white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.content_box .body_box .center .list_wrapper .list .text_wrapper .info {
-  margin-top: 0.06rem;
-  font-size: 0;
-}
-.content_box .body_box .center .list_wrapper .list .text_wrapper .info .label,
-.content_box .body_box .center .list_wrapper .list .text_wrapper .info .text {
+.content_box .body_box .order_list_box .order_list .order_item .top_info .center_info .center_count {
   font-size: 0.26rem;
-  line-height: 0.37rem;
   color: #7D7D7D;
 }
-.content_box .body_box .center .list_wrapper .list .text_wrapper .info .label.red,
-.content_box .body_box .center .list_wrapper .list .text_wrapper .info .text.red {
-  color: #ea5c3b;
+.content_box .body_box .order_list_box .order_list .order_item .top_info .center_info .center_status {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 0.26rem;
 }
-.content_box .body_box .center .list_wrapper .list .text_wrapper .info .label.green,
-.content_box .body_box .center .list_wrapper .list .text_wrapper .info .text.green {
-  color: #79ad48;
+.content_box .body_box .order_list_box .order_list .order_item .top_info .center_info .center_address_countdown {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-/*# sourceMappingURL=search.css.map */
+.content_box .body_box .order_list_box .order_list .order_item .top_info .center_info .center_address_countdown .address {
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 0.26rem;
+}
+.content_box .body_box .order_list_box .order_list .order_item .top_info .center_info .center_address_countdown .countdown {
+  width: 1.6rem;
+}
+.content_box .body_box .order_list_box .order_list .order_item .top_info .center_info .center_address_countdown .countdown .time {
+  vertical-align: middle;
+  display: inline-block;
+  width: 0.36rem;
+  height: 0.36rem;
+  line-height: 0.36rem;
+  border-radius: 0.1rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
+  font-size: 0.2rem;
+}
+.content_box .body_box .order_list_box .order_list .order_item .top_info .center_info .center_address_countdown .countdown .point {
+  font-size: 0.2rem;
+}
+.content_box .body_box .order_list_box .order_list .order_item .bottom_btns {
+  height: 0.9rem;
+  padding: 0 0.2rem;
+  box-sizing: border-box;
+  font-size: 0.28rem;
+}
+.content_box .body_box .order_list_box .order_list .order_item .bottom_btns .b_btn {
+  margin-top: 0.15rem;
+  width: 1.6rem;
+  height: 0.6rem;
+  color: #434040;
+  border: 1px solid #434040;
+  border-radius: 1rem;
+  background: #FFFFFF;
+}
+.content_box .body_box .order_list_box .order_list .order_item .bottom_btns .r_btn {
+  margin-top: 0.15rem;
+  margin-left: 0.2rem;
+  width: 1.6rem;
+  height: 0.6rem;
+  color: #FD4343;
+  border: 1px solid #FD4343;
+  border-radius: 1rem;
+  background: #FFFFFF;
+}

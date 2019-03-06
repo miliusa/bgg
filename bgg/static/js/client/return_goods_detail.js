@@ -22,15 +22,27 @@ $(function(){
 					res = resstr;
 				}
 				if(res.code == 200){
-					var time = getTime(res.data.createtime)
-					$('.goods_img img').attr('haoniu-lazy-data', res.data.ordergoods[0].goodsinfo.thumb)
-					$('.goods_desc .goods_title').text(res.data.ordergoods[0].goodsinfo.title)
-					$('.goods_desc .goods_num span').text(res.data.ordergoods[0].total)
-					$('.goods_desc .goods_price').text('￥' + res.data.ordergoods[0].price)
-					$('.return_desc .return_price ').text('￥' + res.data.original_price)
-					$('.bottom_info .goods_price span').text('￥' + res.data.ordergoods[0].total_price)
-					refundprice = res.data.ordergoods[0].total_price
-					$('span.return_price').text('￥' + res.data.refundprice)
+					$('span.return_price ').text('￥' + res.data.original_price)
+					refundprice = res.data.original_price
+					var html = ''
+					$.each(res.data.ordergoods, function(index, item){
+						html += '<div class="goods_info">\
+									<div class="info_top clear">\
+										<div class="fl goods_img">\
+											<img class="haoniu-lazy-data" haoniu-lazy-data="' + item.goodsinfo.thumb + '" />\
+										</div>\
+										<div class="fr goods_desc">\
+											<p class="goods_title">' + item.goodsinfo.title + '</p>\
+											<p class="goods_num color_999">数量：<span>' + item.total + '</span></p>\
+											<p class="goods_price price_color">￥' + item.price + '</p>\
+										</div>\
+									</div>\
+									<div class="bottom_info">\
+										<p class="goods_price">总价：<span class="price_color">￥' + item.total_price + '</span></p>\
+									</div>\
+								</div>'
+					})
+					$('.goods_list').html(html)
 					haoniuLazyLoading()
 				}else{
 					blackHiht(res.message)

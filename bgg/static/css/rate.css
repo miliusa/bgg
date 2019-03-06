@@ -15,6 +15,9 @@
 .content_box .body_box {
   font-size: 0.32rem;
 }
+.content_box .body_box .rate_item:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
 .content_box .body_box .rate_info {
   padding: 0.2rem;
   box-sizing: border-box;
@@ -56,6 +59,12 @@
   font-size: 0.28rem;
   letter-spacing: 0.03rem;
   resize: none;
+}
+.content_box .body_box p.rate_text {
+  padding: 0.2rem;
+  box-sizing: border-box;
+  font-size: 0.28rem;
+  letter-spacing: 0.03rem;
 }
 .content_box .body_box .rate_img_box .rate_img_list .rate_img_item {
   float: left;

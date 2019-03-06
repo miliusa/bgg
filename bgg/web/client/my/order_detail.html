@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../../static/css/share.css" />
     <link rel="stylesheet" href="../../../static/css/order_detail.css" />
-    <title>待支付详情</title>
+    <title>订单详情</title>
   </head>
 
   <body>
@@ -18,54 +18,76 @@
         <div class="head_title">订单详情</div>
       </div>
       <div class="body_box wait_pay_detail">
-        <div class="goods_info">
-          <div class="info_top clear">
-            <div class="fl goods_img">
-              <img class="haoniu-lazy-data" haoniu-lazy-data="" />
+        <div class="goods_list">
+          <div class="goods_info">
+            <div class="info_top clear">
+              <div class="fl goods_img">
+                <img class="haoniu-lazy-data" haoniu-lazy-data="" />
+              </div>
+              <div class="fr goods_desc">
+                <p class="goods_title"></p>
+                <p class="goods_num color_999">数量：<span></span></p>
+                <p class="goods_price price_color">￥<span></span></p>
+              </div>
             </div>
-            <div class="fr goods_desc">
-              <p class="goods_title"></p>
-              <p class="goods_num color_999">数量：<span></span></p>
-              <p class="goods_price price_color">￥<span></span></p>
+            <div class="bottom_info">
+              <p class="goods_price">合计 <span class="price_color"></span></p>
             </div>
-          </div>
-          <div class="bottom_info">
-            <p class="goods_price">合计 <span class="price_color">￥108.00</span></p>
           </div>
         </div>
         <div class="price_info">
           <p class="text goods_price color_999 clear">
             <span class="fl">商品总价</span>
-            <span class="fr">￥108.00</span>
+            <span class="fr"></span>
           </p>
-          <p class="text translate_price color_999 clear">
-            <span class="fl">运费</span>
-            <span class="fr">￥0.00</span>
+          <p class="text coupon_value color_999 clear">
+            <span class="fl">优惠券</span>
+            <span class="fr"></span>
           </p>
           <p class="text total_price clear">
             <span class="fl">订单总价</span>
-            <span class="fr">￥0.00</span>
+            <span class="fr"></span>
           </p>
         </div>
         <p class="total_pay clear">
-          <span class="fl">需付款</span>
-          <span class="fr price_color">￥108.00</span>
+          <span class="fl">已支付</span>
+          <span class="fr price_color"></span>
         </p>
         <div class="order_info color_999">
           <div class="ordersn">
-            <p class="ordersn_num">订单编号：<span>4374856871</span></p>
-            <span class="copy">复制</span>
+            <p class="ordersn_num">订单编号：<span></span></p>
+            <!--<span class="copy" name="copy">复制</span>-->
           </div>
-          <p class="create_time">创建时间：<span>2018-01-06 12:00</span></p>
+          <p class="create_time"></p>
+          <p class="pay_time"></p>
+          <p class="translate_time"></p>
+          <p class="complete_time"></p>
+          <!--<p class="pay_time">付款时间：<span>2018-01-06 12:00</span></p>
+          <p class="translate_time">发货时间：<span>2018-01-06 12:00</span></p>
+          <p class="complete_time">成交时间：<span>2018-01-06 12:00</span></p>-->
+        </div>
+        <div class="deliver_info clear">
+          <div class="fl">
+            <p class="deliver">送货员：<span class="name"></span> <span class="phone"></span></p>
+            <p class="address color_999"></p>
+          </div>
+          <div class="fr">
+            <span class="call" name="call">拨打</span>
+          </div>
+        </div>
+        <div class="return_code">
+          <p class="number">收货码: <span></span></p>
+          <div id="qrcode" class="code_img_box"></div>
         </div>
         <div class="btn_box">
-          <button class="r_btn fr pay active">立即付款</button>
-          <button class="b_btn fr cancel active">取消订单</button>
+          <!--<button class="r_btn fr pay active">立即付款</button>
+          <button class="b_btn fr cancel active">取消订单</button>-->
         </div>
       </div>
     </div>
     <script src="../../../static/js/jquery-1.11.0.min.js"></script>
     <script src="../../../static/js/haoniu-lazy-load.js"></script>
+    <script src="../../../static/js/qrcode.min.js"></script>
     <script src="../../../static/js/share.js"></script>
     <script src="../../../static/js/client/order_detail.js"></script>
   </body>

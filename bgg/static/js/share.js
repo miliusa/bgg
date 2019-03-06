@@ -1,7 +1,5 @@
 // 共用地址
-var _apiUrl = 'http://192.168.1.177:8086/proStorage/';
-// token
-var token = 'hUOzGSzZU7gZwtxc';
+var _apiUrl = 'http://bgg.hfrjkf.cn/proStorage/';
 
 // 自定义tap事件
 $( document ).on( "touchstart", function ( e ) {
@@ -15,20 +13,19 @@ $( document ).on( "touchend", function ( e ) {
     $( e.target ).trigger( "tap" );
 } );
 
-
 /* 手机rem适配 */
 ( function ( doc, win ) {
   var docEl = doc.documentElement,
-    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-    recalc = function () {
-      var clientWidth = docEl.clientWidth;
-      if ( !clientWidth ) return;
-      if ( clientWidth >= 750 ) {
-        docEl.style.fontSize = '100px';
-      } else {
-        docEl.style.fontSize = 100 * ( clientWidth / 750 ) + 'px';
-      }
-    };
+      resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+      recalc = function () {
+        var clientWidth = docEl.clientWidth;
+        if ( !clientWidth ) return;
+        if ( clientWidth >= 750 ) {
+          docEl.style.fontSize = '100px';
+        } else {
+          docEl.style.fontSize = 100 * ( clientWidth / 750 ) + 'px';
+        }
+      };
 
   if ( !doc.addEventListener ) return;
   win.addEventListener( resizeEvt, recalc, false );
@@ -53,25 +50,29 @@ function modelClose() {
 var timer = null;
 
 function blackHiht( msg ) {
-  clearTimeout( timer )
-  timer = null
-  $( ".hiht_window_black" ).remove( '' );
-  var text = '<div class="hiht_window_black">\
-                    <div class="hiht_black">' + msg + '</div>\
-                </div>';
-  $( "body" ).append( text );
-  $( ".hiht_window_black" ).show();
-  timer = setTimeout( function () {
-    $( ".hiht_window_black" ).remove( '' );
+  try{
+    app.AppAlert(msg)
+  }catch(err){
     clearTimeout( timer )
     timer = null
-  }, 2000 );
+    $( ".hiht_window_black" ).remove( '' );
+    var text = '<div class="hiht_window_black">\
+                    <div class="hiht_black">' + msg + '</div>\
+                </div>';
+    $( "body" ).append( text );
+    $( ".hiht_window_black" ).show();
+    timer = setTimeout( function () {
+      $( ".hiht_window_black" ).remove( '' );
+      clearTimeout( timer )
+      timer = null
+    }, 2000 );
+  }
 }
 
 function noneTip(msg){
   var msgtip = msg || '暂无数据...'
   var nonehtml = '<div style="width: 100%;text-align:center;background:#fff;padding: 0.6rem 0;">\
-                      <img style="display: inline-block;width: 2rem;padding-bottom: 0.2rem;" src="../../../static/img/none.png">\
+                      <!-- <img style="display: inline-block;width: 2rem;padding-bottom: 0.2rem;" src="../../../static/img/none.png"> -->\
                       <p style="color:#999;font-size: 0.36rem;letter-spacing: 0.03rem;">' + msgtip + '</p>\
                   </div>'
   return nonehtml
@@ -79,7 +80,7 @@ function noneTip(msg){
 
 //毫秒转化成年月日
 function getTime( str ) {
-  var oDate = new Date( str );
+  var oDate = new Date( str*1000 );
   var year = oDate.getFullYear();
   var month = oDate.getMonth() + 1;
   var date = oDate.getDate();
@@ -97,7 +98,7 @@ function getTime( str ) {
 };
 
 function getTime2( str ) {
-  var oDate = new Date( str );
+  var oDate = new Date( str*1000 );
   var year = oDate.getFullYear();
   var month = oDate.getMonth() + 1;
   var date = oDate.getDate();
@@ -106,7 +107,7 @@ function getTime2( str ) {
 }
 // 毫秒转化成年月日
 function getTime3( str ) {
-  var oDate = new Date( str );
+  var oDate = new Date( str*1000 );
   var year = oDate.getFullYear() - 1;
   var month = oDate.getMonth() + 1;
   var date = oDate.getDate();
@@ -135,19 +136,6 @@ function getUrl( name ) {
   } );
   return thisIndex;
 }
-function modalOpen() {
-  $( 'body' ).css( 'overflow', 'hidden' );
-  $( 'body' ).css( 'height', '100%' );
-  $( 'html' ).css( 'overflow', 'hidden' );
-  $( 'html' ).css( 'height', '100%' );
-}
-
-function modalClose() {
-  $( 'body' ).css( 'overflow', 'visible' );
-  $( 'body' ).css( 'height', 'auto' );
-  $( 'html' ).css( 'overflow', 'visible' );
-  $( 'html' ).css( 'height', 'auto' );
-}
 
 // 确认框
 function confirmModal( title, succFun, errFun ) {
@@ -173,16 +161,16 @@ function confirmModal( title, succFun, errFun ) {
       '</div>' +
       '</div>';
   $( 'body' ).append( html );
-  modalOpen();
+  modelOpen();
   $( '.confirm-modal' ).on( 'click', '.cancel-btn', function (e) {
     e.stopPropagation()
     $( '.confirm-modal' ).remove();
-    modalClose();
+    modelClose();
     errFun();
   } );
   $( '.confirm-modal' ).on( 'click', '.confirm-btn', function (e) {
     e.stopPropagation()
-    modalClose();
+    modelClose();
     $( '.confirm-modal' ).remove();
     succFun();
   } );
@@ -190,6 +178,282 @@ function confirmModal( title, succFun, errFun ) {
 
 $( function () {
   $( ".head_left_icon" ).click( function () {
-    window.history.back();
+    if ( getUrl( 'from' ) === 'web' ) {
+      history.back();
+    }else{
+      goBack()
+    }
   } );
 } )
+
+function loading(){
+  var html = '<div id="loading" class="loader">\
+                <div class="loader-inner ball-clip-rotate-multiple">\
+                  <div></div>\
+                  <div></div>\
+                </div>\
+              </div>';
+  $('body').append(html)
+}
+
+function loadend(){
+  //$('#loading').remove()
+}
+
+function ing(){
+  var html = '<div id="ing" class="loader">\
+              <div class="loader-inner ball-spin-fade-loader">\
+                <div></div>\
+                <div></div>\
+                <div></div>\
+                <div></div>\
+                <div></div>\
+                <div></div>\
+                <div></div>\
+                <div></div>\
+              </div>\
+            </div>'
+  $('body').append(html)
+}
+
+function ingend() {
+  $('#ing').remove()
+}
+
+// 打电话
+$('[name=call]').on('tap', function () {
+  var phone = $(this).attr('data-mobile')
+  callPhone(phone)
+})
+
+// 复制到剪贴板
+$('[name=copy]').on('tap', function () {
+  var text = $(this).attr('data-copy')
+  copyText(text)
+})
+
+/** 调用原生方法 */
+// 返回上一级
+function goBack() {
+  try{
+    app.goBack()
+  }catch(err){
+    blackHiht('返回上一级失败')
+  }
+}
+
+// 获取用户token
+function getUserToken(){
+  var token = ''
+  try{
+    token = app.getUserTooken()
+  }catch(err){
+    blackHiht('获取不到登录信息')
+  }
+  return token
+}
+
+// 微信支付
+function doWeChatPayment(str, type){
+  try{
+    app.doWeChatPayment(str, type)
+  }catch(err){
+    blackHiht('微信支付失败')
+  }
+}
+
+// 支付宝支付
+function doAlipayPayment(str, type){
+  try{
+    app.doAlipayPayment(str, type)
+  }catch(err){
+    blackHiht('支付宝支付失败')
+  }
+}
+
+// 拨打电话
+function callPhone(phone){
+  try{
+    app.callPhone(phone)
+  }catch(err){
+    blackHiht('拨打电话失败')
+  }
+}
+
+// 复制文本
+function copyText(text){
+  try{
+    app.copyText(text)
+  }catch(err){
+    blackHiht('复制文本失败')
+  }
+}
+
+// 跳转到登录页
+function doLogin() {
+  try{
+    app.doLogin()
+  }catch(err){
+    blackHiht('跳转到登录页失败')
+  }
+}
+
+// 跳转到购物车
+function goShopping() {
+  try{
+    app.goShopping()
+  }catch(err){
+    blackHiht('跳转到购物车失败')
+  }
+}
+
+// 跳转到商家申请表单
+function goBusinessApply() {
+  try{
+    app.goBusinessApply()
+  }catch(err){
+    blackHiht('跳转到商家申请表单失败')
+  }
+}
+
+// 跳转到合伙人申请表单
+function goPartnerApply() {
+  try{
+    app.goPartnerApply()
+  }catch(err){
+    blackHiht('跳转到合伙人申请表单失败')
+  }
+}
+
+// 跳转到评价页
+function doComment(info){
+  try{
+    app.doComment(info)
+  }catch(err){
+    blackHiht('跳转到商品评价页失败')
+  }
+}
+
+// 分享
+function ShareWeChat(str) {
+  try{
+    app.ShareWeChat(str)
+  }catch(err){
+    blackHiht('分享失败')
+  }
+  $('.share-modal').hide()
+}
+
+// 上传头像
+function uploadAvatar(){
+	try{
+		app.uploadAvatar()
+	}catch(err){
+		blackHiht('上传失败')
+	}
+}
+
+// 跳转到选择地址页
+function goSelectAddress(){
+  try{
+    app.goSelectAddress()
+  }catch(err){
+    blackHiht('跳转选择地址页失败')
+  }
+}
+
+// 跳转到银行卡信息页
+function doUpdateBankcard() {
+  try{
+    app.doUpdateBankcard()
+  }catch(err){
+    blackHiht('跳转失败')
+  }
+}
+
+function appGetVersion(){
+  var version = ''
+  try{
+    version = app.appGetVersion()
+  }catch(err){
+    blackHiht('获取版本号失败')
+  }
+  return version
+}
+
+function openQrCode(){
+  try{
+    app.openQrCode()
+  }catch(err){
+    blackHiht('扫码二维码失败')
+  }
+}
+
+function appCancelPay(){
+  try{
+    app.appCancelPay()
+  }catch(err){
+    blackHiht('取消支付失败')
+  }
+}
+
+// 原生调用的方法
+function goSuccess(type){
+  // 1 正常商品支付
+  // 2 商户押金支付
+    if(type == 1){
+        location.href = '../index/success.html?type=' + type
+    }else{
+        location.href = '../index/applying.html?type=' + type
+    }
+}
+
+// 跳转到评价成功页
+function goRateSuccess(id){
+  location.replace('rate_success.html?from=web&id=' + id)
+}
+
+// 更改头像
+function showAvatar(imgUrl){
+  $('[name=avatar]').attr('src', imgUrl)
+}
+
+// 将收货码填入输入框
+function getReceiptCode(code) {
+  $('[name=recive_code]').val(code)
+}
+
+// 更改地址信息
+function getAddressInfo(info){
+  /** info
+   *  {
+   *    longitude,        经度
+   *    latitude,         纬度
+   *    provinceName,     省
+   *    cityName,         市
+   *    areaName,         区
+   *    detailAddressInfo 地址详细信息
+   *  }
+   */
+  var infoData = JSON.parse(info)
+  $('#longitude').val(infoData.longitude)
+  $('#latitude').val(infoData.latitude)
+  $('#addressInfo').val(infoData.provinceName + ',' + infoData.cityName + ',' + infoData.areaName)
+  $('#detailAddressInfo').val(infoData.detailAddressInfo)
+}
+
+
+function lastUrl(){
+  sessionStorage.setItem('url', location.href)
+}
+
+// 如果不是订单页, 选择地址页的话, 清除addressid的缓存
+if(location.href.indexOf('/order.html') == -1 && location.href.indexOf('/cart_order.html') == -1 && location.href.indexOf('/select_address.html') == -1 ){
+  sessionStorage.removeItem('addressid')
+}
+
+// 打客服电话
+$('[name=call_kefu]').on('tap', function () {
+  var phone = $(this).attr('data-phone')
+  callPhone(phone)
+})

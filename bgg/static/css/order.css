@@ -46,29 +46,38 @@
   font-size: 0.26rem;
   line-height: 0.3rem;
 }
-.content_box .body_box .goods_wrapper {
-  padding: 0.2rem;
+.content_box .body_box .address .content_text .tips {
+  display: none;
+  font-size: 0.26rem;
+  line-height: 0.5rem;
 }
-.content_box .body_box .goods_wrapper .goods {
+.content_box .body_box .goods_wrapper .goods_list {
+  padding: 0.2rem;
+  box-sizing: border-box;
+}
+.content_box .body_box .goods_wrapper .goods_list .goods {
   border-radius: 0.08rem;
   background-color: #fff;
 }
-.content_box .body_box .goods_wrapper .goods .goods_content {
+.content_box .body_box .goods_wrapper .goods_list .goods:not(:last-child) {
+  margin-bottom: 0.1rem;
+}
+.content_box .body_box .goods_wrapper .goods_list .goods .goods_content {
   padding: 0.3rem;
   border-bottom: 1px solid #eee;
 }
-.content_box .body_box .goods_wrapper .goods .goods_content .goods_left {
+.content_box .body_box .goods_wrapper .goods_list .goods .goods_content .goods_left {
   float: left;
   margin-right: 0.16rem;
 }
-.content_box .body_box .goods_wrapper .goods .goods_content .goods_left img {
+.content_box .body_box .goods_wrapper .goods_list .goods .goods_content .goods_left img {
   width: 1.4rem;
   height: 1.4rem;
 }
-.content_box .body_box .goods_wrapper .goods .goods_content .goods_des {
+.content_box .body_box .goods_wrapper .goods_list .goods .goods_content .goods_des {
   overflow: hidden;
 }
-.content_box .body_box .goods_wrapper .goods .goods_content .goods_des .goods_title {
+.content_box .body_box .goods_wrapper .goods_list .goods .goods_content .goods_des .goods_title {
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -81,55 +90,58 @@
   color: #333;
   margin: 3px 0 6px 0;
 }
-.content_box .body_box .goods_wrapper .goods .goods_content .goods_des .goods_text .goods_price {
+.content_box .body_box .goods_wrapper .goods_list .goods .goods_content .goods_des .goods_text .goods_price {
   font-size: 0.32rem;
   line-height: 0.5rem;
   color: #ef211a;
 }
-.content_box .body_box .goods_wrapper .goods .goods_content .goods_des .goods_text .goods_num {
+.content_box .body_box .goods_wrapper .goods_list .goods .goods_content .goods_des .goods_text .goods_num {
   float: right;
   font-size: 0;
 }
-.content_box .body_box .goods_wrapper .goods .goods_content .goods_des .goods_text .goods_num span {
+.content_box .body_box .goods_wrapper .goods_list .goods .goods_content .goods_des .goods_text .goods_num span {
   display: inline-block;
   vertical-align: top;
 }
-.content_box .body_box .goods_wrapper .goods .goods_content .goods_des .goods_text .goods_num .subtract {
+.content_box .body_box .goods_wrapper .goods_list .goods .goods_content .goods_des .goods_text .goods_num .subtract {
   width: 0.5rem;
   height: 0.5rem;
   background: url(../img/jian.png);
   background-size: 100% 100%;
 }
-.content_box .body_box .goods_wrapper .goods .goods_content .goods_des .goods_text .goods_num .add {
+.content_box .body_box .goods_wrapper .goods_list .goods .goods_content .goods_des .goods_text .goods_num .add {
   width: 0.5rem;
   height: 0.5rem;
   background: url(../img/jia.png);
   background-size: 100% 100%;
 }
-.content_box .body_box .goods_wrapper .goods .goods_content .goods_des .goods_text .goods_num .number {
+.content_box .body_box .goods_wrapper .goods_list .goods .goods_content .goods_des .goods_text .goods_num .number {
   text-align: center;
   width: 0.8rem;
   height: 0.5rem;
   line-height: 0.5rem;
   font-size: 0.28rem;
 }
-.content_box .body_box .goods_wrapper .goods .price {
+.content_box .body_box .goods_wrapper .goods_list .goods .price {
   text-align: right;
   padding: 0.2rem 0.3rem;
   font-size: 0;
 }
-.content_box .body_box .goods_wrapper .goods .price div {
+.content_box .body_box .goods_wrapper .goods_list .goods .price div {
   display: inline-table;
   vertical-align: top;
   font-size: 0.28rem;
   line-height: 0.3rem;
   margin-right: 0.2rem;
 }
-.content_box .body_box .goods_wrapper .goods .price div:last-child {
+.content_box .body_box .goods_wrapper .goods_list .goods .price div:last-child {
   margin: 0;
 }
-.content_box .body_box .goods_wrapper .goods .price div span {
+.content_box .body_box .goods_wrapper .goods_list .goods .price div span {
   color: #EF211A;
+}
+.content_box .body_box .info {
+  margin-bottom: 0.1rem;
 }
 .content_box .body_box .info .label {
   float: left;
@@ -141,6 +153,17 @@
 }
 .content_box .body_box .info .info_text input {
   width: 100%;
+}
+.content_box .body_box .info div[name=select_coupon] {
+  float: right;
+  display: flex;
+  align-items: center;
+}
+.content_box .body_box .info div[name=select_coupon] span[name=coupon_value] {
+  padding-right: 0.1rem;
+}
+.content_box .body_box .info div[name=select_coupon] img {
+  height: 0.32rem;
 }
 .content_box .body_box .info .message {
   margin-bottom: 0.1rem;
@@ -154,10 +177,9 @@
   background-color: #fff;
 }
 .content_box .body_box .info .subtotal .block {
-  padding: 0.3rem 0;
   border-bottom: 1px solid #eee;
   font-size: 0.28rem;
-  line-height: 0.32rem;
+  line-height: 1rem;
 }
 .content_box .body_box .info .subtotal .block:last-child {
   border: none;
@@ -169,7 +191,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 9;
 }
 .content_box .foot .foot_btn {
   padding: 0 0.4rem;
@@ -197,4 +219,56 @@
 .content_box .foot .foot_text span:last-child {
   margin: 0;
   color: #EF211A;
+}
+.content_box .coupon_select_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 0.3rem;
+  z-index: 11;
+  display: none;
+}
+.content_box .coupon_select_modal .coupon_select_content {
+  position: absolute;
+  bottom: 0;
+  background: #ffffff;
+  width: 100%;
+}
+.content_box .coupon_select_modal .coupon_select_content .coupon_title {
+  text-align: center;
+  line-height: 1rem;
+  font-size: 0.32rem;
+}
+.content_box .coupon_select_modal .coupon_select_content .coupon_list {
+  padding: 0 0.2rem;
+  max-height: 4.08rem;
+  overflow-y: scroll;
+}
+.content_box .coupon_select_modal .coupon_select_content .coupon_list .coupon_item {
+  border-bottom: 0.02rem solid #eee;
+  line-height: 1rem;
+  font-size: 0.3rem;
+  box-sizing: border-box;
+}
+.content_box .coupon_select_modal .coupon_select_content .coupon_list .coupon_item .sel_icon {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: url(../img/gou.png) no-repeat center center;
+  background-size: 0.36rem 0.36rem;
+}
+.content_box .coupon_select_modal .coupon_select_content .coupon_list .coupon_item .sel_icon.active {
+  background: url(../img/gouh.png) no-repeat center center;
+  background-size: 0.36rem 0.36rem;
+}
+.content_box .coupon_select_modal .coupon_select_content .close_modal {
+  width: 100%;
+  background: #f5633a;
+  color: #ffffff;
+  height: 0.8rem;
+  border: none;
+  outline: none;
 }

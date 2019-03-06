@@ -44,96 +44,108 @@
                     font-size: 0.26rem;
                     line-height: 0.3rem;
                 }
+                .tips{
+                    display: none;
+                    font-size: 0.26rem;
+                    line-height: 0.5rem;
+                }
             }
         }
         .goods_wrapper {
-            padding: 0.2rem;
-            .goods {
-                border-radius: 0.08rem;
-                background-color: #fff;
-                .goods_content {
-                    padding: 0.3rem;
-                    border-bottom: 1px solid #eee;
-                    .goods_left {
-                        float: left;
-                        margin-right: 0.16rem;
-                        img {
-                            width: 1.4rem;
-                            height: 1.4rem;
-                        }
+            .goods_list{
+                padding: 0.2rem;
+                box-sizing: border-box;
+                .goods {
+                    border-radius: 0.08rem;
+                    background-color: #fff;
+                    &:not(:last-child){
+                        margin-bottom: 0.1rem;
                     }
-                    .goods_des {
-                        overflow: hidden;
-                        .goods_title {
-                            display: -webkit-box;
+                    .goods_content {
+                        padding: 0.3rem;
+                        border-bottom: 1px solid #eee;
+                        .goods_left {
+                            float: left;
+                            margin-right: 0.16rem;
+                            img {
+                                width: 1.4rem;
+                                height: 1.4rem;
+                            }
+                        }
+                        .goods_des {
                             overflow: hidden;
-                            text-overflow: ellipsis;
-                            word-break: break-all;
-                            -webkit-box-orient: vertical;
-                            -webkit-line-clamp: 2;
-                            font-size: 0.28rem;
-                            line-height: 0.36rem;
-                            height:0.72rem;
-                            color: #333;
-                            margin: 3px 0 6px 0;
-                        }
-                        .goods_text {
-                            .goods_price {
-                                font-size: 0.32rem;
-                                line-height: 0.5rem;
-                                color: #ef211a;
+                            .goods_title {
+                                display: -webkit-box;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                word-break: break-all;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                                font-size: 0.28rem;
+                                line-height: 0.36rem;
+                                height:0.72rem;
+                                color: #333;
+                                margin: 3px 0 6px 0;
                             }
-                            .goods_num {
-                                float: right;
-                                font-size: 0;
-                                span {
-                                    display: inline-block;
-                                    vertical-align: top;
-                                }
-                                .subtract {
-                                    width: 0.5rem;
-                                    height: 0.5rem;
-                                    background: url(../img/jian.png);
-                                    background-size: 100% 100%;
-                                }
-                                .add {
-                                    width: 0.5rem;
-                                    height: 0.5rem;
-                                    background: url(../img/jia.png);
-                                    background-size: 100% 100%;
-                                }
-                                .number {
-                                    text-align: center;
-                                    width: 0.8rem;
-                                    height: 0.5rem;
+                            .goods_text {
+                                .goods_price {
+                                    font-size: 0.32rem;
                                     line-height: 0.5rem;
-                                    font-size: 0.28rem;
+                                    color: #ef211a;
+                                }
+                                .goods_num {
+                                    float: right;
+                                    font-size: 0;
+                                    span {
+                                        display: inline-block;
+                                        vertical-align: top;
+                                    }
+                                    .subtract {
+                                        width: 0.5rem;
+                                        height: 0.5rem;
+                                        background: url(../img/jian.png);
+                                        background-size: 100% 100%;
+                                    }
+                                    .add {
+                                        width: 0.5rem;
+                                        height: 0.5rem;
+                                        background: url(../img/jia.png);
+                                        background-size: 100% 100%;
+                                    }
+                                    .number {
+                                        text-align: center;
+                                        width: 0.8rem;
+                                        height: 0.5rem;
+                                        line-height: 0.5rem;
+                                        font-size: 0.28rem;
+                                    }
                                 }
                             }
                         }
                     }
-                }
-                .price {
-                    text-align: right;
-                    padding: 0.2rem 0.3rem;
-                    font-size: 0;
-                    div {
-                        display: inline-table;
-                        vertical-align: top;
-                        font-size: 0.28rem;
-                        line-height: 0.3rem;
-                        margin-right: 0.2rem;
-                        &:last-child {
-                            margin: 0;
-                        }
-                        span {
-                            color: #EF211A;
+                    .price {
+                        text-align: right;
+                        padding: 0.2rem 0.3rem;
+                        font-size: 0;
+                        div {
+                            display: inline-table;
+                            vertical-align: top;
+                            font-size: 0.28rem;
+                            line-height: 0.3rem;
+                            margin-right: 0.2rem;
+                            &:last-child {
+                                margin: 0;
+                            }
+                            span {
+                                color: #EF211A;
+                            }
                         }
                     }
                 }
             }
         }
         .info {
+            margin-bottom: 0.1rem;
             .label {
                 float: left;
                 margin-right: 0.2rem;
@@ -143,6 +155,17 @@
                 color: #999;
                 input {
                     width: 100%;
+                }
+            }
+            div[name=select_coupon]{
+                float: right;
+                display: flex;
+                align-items: center;
+                span[name=coupon_value]{
+                    padding-right: 0.1rem;
+                }
+                img {
+                    height: 0.32rem;
                 }
             }
             .message {
@@ -156,10 +179,9 @@
                 padding: 0 0.2rem;
                 background-color: #fff;
                 .block {
-                    padding: 0.3rem 0;
                     border-bottom: 1px solid #eee;
                     font-size: 0.28rem;
-                    line-height: 0.32rem;
+                    line-height: 1rem;
                     &:last-child {
                         border: none;
                     }
@@ -174,7 +196,7 @@
         position: fixed;
         bottom: 0;
         width: 100%;
-        z-index: 99;
+        z-index: 9;
         .foot_btn {
             padding: 0 0.4rem;
             float: right;
@@ -200,6 +222,58 @@
                     margin: 0;
                     color: #EF211A;
                 }
+            }
+        }
+    }
+    .coupon_select_modal{
+        position: fixed;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background: rgba(0,0,0,.5);
+        font-size: 0.3rem;
+        z-index: 11;
+        display: none;
+        .coupon_select_content{
+            position: absolute;
+            bottom: 0;
+            background: #ffffff;
+            width: 100%;
+            .coupon_title{
+                text-align: center;
+                line-height: 1rem;
+                font-size: 0.32rem;
+            }
+            .coupon_list{
+                padding: 0 0.2rem;
+                max-height: 4.08rem;
+                overflow-y: scroll;
+                .coupon_item{
+                    border-bottom:0.02rem solid #eee;
+                    line-height: 1rem;
+                    font-size: 0.3rem;
+                    box-sizing: border-box;
+                    .sel_icon {
+                        display: inline-block;
+                        width: 1rem;
+                        height: 1rem;
+                        background: url(../img/gou.png) no-repeat center center;
+                        background-size: 0.36rem 0.36rem;
+                    }
+                    .sel_icon.active {
+                        background: url(../img/gouh.png) no-repeat center center;
+                        background-size: 0.36rem 0.36rem;
+                    }
+                }
+            }
+            .close_modal{
+                width: 100%;
+                background: #f5633a;
+                color: #ffffff;
+                height:0.8rem;
+                border:none;
+                outline: none;
             }
         }
     }

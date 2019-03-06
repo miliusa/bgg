@@ -57,7 +57,7 @@ $(function(){
 										<div class="rate_img_list clear">';
 						$.each(item.commentmedia,function (index2,item2) {
 							html +='<div class="img_box fl">\
-									<img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/test3.jpg" />\
+									<img class="haoniu-lazy-data" haoniu-lazy-data="' + item2 + '" />\
 								</div>';
 						})
 						html += '</div></div></div>';
@@ -65,7 +65,7 @@ $(function(){
 					loadall = false
 					if(res.data == '' || res.data.length < 10){
 						loadall = true
-						blackHiht("没有更多数据了");
+						// blackHiht("没有更多数据了");
 					}
 					if(page == 1){
 						if(res.data == ''){
@@ -92,7 +92,7 @@ $(function(){
 	function pullupRefresh() {
 		if(loadall){
 			mui('#pullrefresh').pullRefresh().endPullupToRefresh();
-			blackHiht('没有更多数据了');
+			// blackHiht('没有更多数据了');
 			$('.mui-pull-bottom-pocket').css('display', 'none');
 			return
 		}else{

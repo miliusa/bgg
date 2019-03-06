@@ -30,7 +30,6 @@ $(function(){
                     var swiper = new Swiper('.swiper-container', {
                         pagination: '.swiper-pagination',
                         paginationClickable: true,
-                        autoplay:true,
                         loop : true,
                         autoplay : 7000,
                         speed:600,
@@ -42,39 +41,50 @@ $(function(){
                     $('[name=dealPrice]').text(res.data.price);
                     $('[name=salesNum]').text(res.data.sales);
                     $('.style_modal_img img').attr('haoniu-lazy-data', res.data.thumb);
-                    var paramhtml = '';
-                    $.each(res.data.params, function (index, item) {
-                        paramhtml += '<div class="deal_msg_list">\
+                    if(res.data.params.length == 0){
+                        $('.discuss_content_list.desc').hide();
+                    }else{
+                        var paramhtml = '';
+                        $.each(res.data.params, function (index, item) {
+                            paramhtml += '<div class="deal_msg_list">\
                                         <div class="deal_msg_tabel">' + item.key + '</div>\
                                         <div class="deal_msg_text">' + item.value + '</div>\
                                     </div>';
-                    });
-                    $('.discuss_content_list.desc').html(paramhtml);
+                        });
+                        $('.discuss_content_list.desc').html(paramhtml);
+                    }
                     $('.deal_img_box').html(res.data.desc);
                     $('.discuss_head_list.rate').text('商品评价(' + res.data.comment + ')');
                     if(res.data.comment == 0){
                         $('.discuss_content_list.rate').html(noneTip('暂无评论'))
                     }
                     // 购买时选择
-                    var optionshtml = '';
-                    var optionsText = ''
-                    $.each(res.data.options, function(index, item){
-                        optionshtml += '<div class="style_list">\
+                    if(res.data.options.length !== 0){
+                        var optionshtml = '';
+                        var optionsText = ''
+                        $.each(res.data.options, function(index, item){
+                            optionshtml += '<div class="style_list">\
                                             <div class="style_title">' + item.groupname + '</div>\
                                             <div class="style_text_box">';
-                        $.each(item.option, function(index2,item2){
-                            var isactive = index2 == 0?'active':'';
-                            optionshtml += '<div class="style_text_list ' + isactive + '" data-option-id="' + item2.id + '">' + item2.optionname + '</div>';
+                            $.each(item.option, function(index2,item2){
+                                var isactive = index2 == 0?'active':'';
+                                optionshtml += '<div class="style_text_list ' + isactive + '" data-option-id="' + item2.id + '">' + item2.optionname + '</div>';
+                            });
+                            optionshtml += '</div></div>';
+                            optionsText += item.groupname
+                            if(index < res.data.options.length - 1){
+                                optionsText += ','
+                            }
                         });
-                        optionshtml += '</div></div>';
-                        optionsText += item.groupname
-                        if(index < res.data.options.length - 1){
-                            optionsText += ','
-                        }
-                    });
+                        $('[name=deal_style]').text(optionsText)
+                        $('.style_modal_body').prepend(optionshtml);
+                    }else{
+                        $('[name=surplus]').text(res.data.total)
+                        $('.choose.style_modal_text').hide()
+                        $('.style_modal_body .style_list').css('border-bottom','none')
+                    }
                     options = res.data.optionsrelation;
-                    $('[name=deal_style]').text(optionsText)
-                    $('.style_modal_body').prepend(optionshtml);
+                    judge();
                     haoniuLazyLoading()
                 } else{
                     blackHiht(res.message);
@@ -88,31 +98,69 @@ $(function(){
     }
     initialize();
 
+    // 获取客服电话
+    $.ajax({
+        url: _apiUrl + 'public/bgg/index/index/syssetconfig',
+        data: {
+            type: 'system_global '
+        },
+        dataType: 'JSON',
+        type: 'GET',
+        success: function (resstr) {
+            var res = null;
+            if (typeof resstr.result == "undefined") {
+                res = JSON.parse(resstr);
+            } else {
+                res = resstr;
+            }
+            if(res.code == 200){
+                $('[name=call_kefu]').attr('data-phone', res.data.customer_service)
+            }else{
+                blackHiht(res.message)
+            }
+        },
+        error: function () {
+            blackHiht('网络错误')
+        }
+    })
     // 判断当前选择optionid
     function judge(){
-        var nums = [];
-        var length = $('.style_text_list.active').length;
-        for(var i=0;i<length;i++){
-            nums[i] = $('.style_text_list.active').eq(i).attr('data-option-id');
+        if(options.length != 0){
+            var nums = [];
+            var length = $('.style_text_list.active').length;
+            for(var i=0;i<length;i++){
+                nums[i] = $('.style_text_list.active').eq(i).attr('data-option-id');
+            }
+            $.each(options, function(index,item){
+                for(var j=0;j<nums.length;j++){
+                    var isTrue = true
+                    if(item.optionids.indexOf(nums[j]) != -1){
+                        isTrue = true && isTrue
+                    }else{
+                        isTrue = false && isTrue
+                    }
+                }
+                if(isTrue){
+                    // 更改库存和价格
+                    $('[name=dealPrice]').text(item.price);
+                    $('[name=surplus]').text(item.total);
+                    if(item.thumb){
+                        $('.style_modal_img img').attr('haoniu-lazy-data', item.thumb);
+                        haoniuLazyLoading()
+                    }
+                    optionid = item.id;
+                    return true
+                }
+            })
+            var optionsText = ''
+            $.each($('.style_text_list.active'), function (index, item){
+                optionsText += $(item).text()
+                if(index < $('.style_text_list.active').length - 1){
+                    optionsText += ','
+                }
+            })
+            $('[name=deal_style]').text(optionsText)
         }
-        $.each(options, function(index,item){
-            if(item.optionids.indexOf(nums[0]) != -1 && item.optionids.indexOf(nums[1]) != -1){
-                // 更改库存和价格
-                $('[name=dealPrice]').text(item.price);
-                $('[name=surplus]').text(item.total);
-                $('.style_modal_img img').attr('haoniu-lazy-data', item.thumb);
-                optionid = item.id;
-                haoniuLazyLoading()
-            }
-        })
-        var optionsText = ''
-        $.each($('.style_text_list.active'), function (index, item){
-            optionsText += $(item).text()
-            if(index < $('.style_text_list.active').length - 1){
-                optionsText += ','
-            }
-        })
-        $('[name=deal_style]').text(optionsText)
     }
 
     var goodsStatus = null;

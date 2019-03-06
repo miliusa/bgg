@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="LS">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../../../static/css/mui.min.css">
+    <link rel="stylesheet" href="../../../static/css/share.css" />
+    <link rel="stylesheet" href="../../../static/css/order_list.css" />
+    <title>我的订单</title>
+  </head>
+
+  <body>
+    <div class="content_box">
+      <div class="head_box white">
+        <div class="head_title">订单</div>
+      </div>
+      <div class="tabbar">
+      	<span class="tab_item on">全部</span>
+      	<!--<span class="tab_item">待发货</span>-->
+      	<span class="tab_item">待收货</span>
+      	<span class="tab_item">已完成</span>
+	    <span class="tab_item">维权订单</span>
+	  </div>
+      <div class="body_box merchant_order_list">
+		  <div id="pullrefresh" class="mui-content mui-scroll-wrapper order_list_box">
+			  <div class="mui-scroll">
+				  <!--数据列表-->
+				  <div class="mui-table-view mui-table-view-chevron order_list">
+					  <!--<div class="order_item">
+						  <div class="top_info clear">
+							  <div class="img_box fl">
+								  <img class="haoniu-lazy-data" haoniu-lazy-data="../../static/img/test1.jpg"/>
+							  </div>
+							  <div class="center_info fl">
+								  <p class="title">贝因美菁爱奶粉</p>
+								  <p class="count_price">
+									  <span class="count">数量： 3</span>
+									  <span class="price price_color">￥200.00</span>
+								  </p>
+								  <p class="address color_999">地址：西湖国际广场A座</p>
+							  </div>
+							  <div class="left_info fl">
+								  <p class="order_status">待收货</p>
+								  <div class="countdown">
+								    <span class="hour">00</span>
+								    <span class="point">:</span>
+								    <span class="minute">59</span>
+								    <span class="point">:</span>
+								    <span class="second">59</span>
+								  </div>
+							  </div>
+						  </div>
+					  </div>-->
+				  </div>
+			  </div>
+		  </div>
+      </div>
+    </div>
+    <script src="../../../static/js/jquery-1.11.0.min.js"></script>
+	<script src="../../../static/js/mui.min.js"></script>
+    <script src="../../../static/js/haoniu-lazy-load.js"></script>
+    <script src="../../../static/js/share.js"></script>
+    <script src="../../../static/js/merchant/order_list.js"></script>
+  </body>
+
+</html>

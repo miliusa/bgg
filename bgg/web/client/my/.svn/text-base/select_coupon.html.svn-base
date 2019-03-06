@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="LS">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../../static/css/mui.min.css">
+    <link rel="stylesheet" href="../../../static/css/share.css" />
+    <link rel="stylesheet" href="../../../static/css/my_coupon.css" />
+    <title>优惠券</title>
+  </head>
+
+  <body>
+    <div class="content_box">
+      <div class="head_box">
+        <i class="head_left_icon"></i>
+        <div class="head_title">优惠券</div>
+      </div>
+      <div class="body_box">
+        <div id="pullrefresh" class="mui-content mui-scroll-wrapper coupon_list_box">
+          <div class="mui-scroll">
+            <!--数据列表-->
+            <div class="mui-table-view mui-table-view-chevron coupon_list">
+              <!-- <div class="mui-table-view-cell recommend_item">
+                   <div class="top_banner">
+                       <div class="img_box">
+                           <img class="haoniu-lazy-data" haoniu-lazy-data="../../../static/img/test2.png"/>
+                       </div>
+                       <span class="order_num">TOP1</span>
+                   </div>
+                   <div class="bottom_info">
+                       <div class="info_title">全能宝贝白金装纸尿裤L大码超柔软干爽透气全芯体夏季超薄尿不湿</div>
+                       <div class="info_label color_999">品牌特卖-质量保证</div>
+                       <div class="info_price clear">
+                           <div class="price fl">
+                               <span class="now_price price_color">￥299.9</span>
+                               <span class="old_price color_999">￥399.00</span>
+                           </div>
+                           <div class="hot_tips fr">
+                               <span class="tip"></span>
+                           </div>
+                       </div>
+                   </div>
+               </div>-->
+            </div>
+          </div>
+        </div>
+		<!--<div class="coupon_list">
+					&lt;!&ndash;<div class="coupon_item unuse">
+						<div class="item_top clear">
+							<div class="coupon_rule fl">
+								<p class="title">优惠券</p>
+								<p class="rule color_999">满200可用</p>
+							</div>
+							<div class="coupon_value fr">￥<span>10</span></div>
+						</div>
+						<div class="item_bottom clear">
+							<span class="available_time color_999 fl">有效期：2018-02-03</span>
+							<span class="use_status active fr">使用</span>
+						</div>
+					</div>
+					<div class="coupon_item used">
+						<div class="item_top clear">
+							<div class="coupon_rule fl">
+								<p class="title">优惠券</p>
+								<p class="rule color_999">满200可用</p>
+							</div>
+							<div class="coupon_value fr">￥<span>10</span></div>
+						</div>
+						<div class="item_bottom clear">
+							<span class="available_time color_999 fl">有效期：2018-02-03</span>
+							<span class="use_status fr color_999">已使用</span>
+						</div>
+					</div>
+					<div class="coupon_item disabled">
+						<div class="item_top clear">
+							<div class="coupon_rule fl">
+								<p class="title">优惠券</p>
+								<p class="rule">满200可用</p>
+							</div>
+							<div class="coupon_value fr">￥<span>10</span></div>
+						</div>
+						<div class="item_bottom clear">
+							<span class="available_time fl">有效期：2018-02-03</span>
+							<span class="use_status fr">已过期</span>
+						</div>
+					</div>&ndash;&gt;
+				</div>-->
+      </div>
+    </div>
+    <script src="../../../static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../../static/js/mui.min.js"></script>
+    <script src="../../../static/js/swiper.min.js"></script>
+    <script src="../../../static/js/share.js"></script>
+    <script src="../../../static/js/client/my_coupon.js"></script>
+  </body>
+
+</html>

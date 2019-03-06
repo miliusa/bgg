@@ -1,43 +1,56 @@
 .content_box {
   background: #FFFFFF;
+  min-height: 100vh;
 }
 .content_box .body_box .record_list_box .record_list .record_item {
+  background: #ffffff;
+}
+.content_box .body_box .record_list_box .record_list .record_item:not(:last-child) {
+  margin-bottom: 0.1rem;
+}
+.content_box .body_box .record_list_box .record_list .record_item .sn {
+  padding: 0 0.2rem;
+  font-size: 0.28rem;
+  line-height: 0.7rem;
+  border-bottom: 1px solid #eee;
+}
+.content_box .body_box .record_list_box .record_list .record_item .center_info {
+  padding: 0.2rem 0;
   height: 1.8rem;
   border-bottom: 1px solid #eee;
   display: flex;
-  padding: 0.2rem 0;
   box-sizing: border-box;
 }
-.content_box .body_box .record_list_box .record_list .record_item .record_type {
+.content_box .body_box .record_list_box .record_list .record_item .center_info .record_type {
   width: 1.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.content_box .body_box .record_list_box .record_list .record_item .record_type img {
+.content_box .body_box .record_list_box .record_list .record_item .center_info .record_type img {
   width: 1rem;
   height: 1rem;
 }
-.content_box .body_box .record_list_box .record_list .record_item .center {
+.content_box .body_box .record_list_box .record_list .record_item .center_info .center {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.content_box .body_box .record_list_box .record_list .record_item .center .record_title {
+.content_box .body_box .record_list_box .record_list .record_item .center_info .center .record_title {
   font-size: 0.3rem;
   color: #3F3F3F;
   letter-spacing: 0.01rem;
 }
-.content_box .body_box .record_list_box .record_list .record_item .center .record_balance {
+.content_box .body_box .record_list_box .record_list .record_item .center_info .center .record_balance {
   font-size: 0.24rem;
   color: #2F2F2F;
 }
-.content_box .body_box .record_list_box .record_list .record_item .center .record_time {
+.content_box .body_box .record_list_box .record_list .record_item .center_info .center .record_time {
   font-size: 0.22rem;
   color: #808080;
 }
-.content_box .body_box .record_list_box .record_list .record_item .right {
+.content_box .body_box .record_list_box .record_list .record_item .center_info .right {
   width: 2rem;
   padding-right: 0.2rem;
   box-sizing: border-box;
@@ -46,12 +59,33 @@
   justify-content: space-between;
   align-items: flex-end;
 }
-.content_box .body_box .record_list_box .record_list .record_item .right .record_money {
+.content_box .body_box .record_list_box .record_list .record_item .center_info .right .record_money {
   font-size: 0.38rem;
-  color: #3F3F3F;
+  color: #999;
 }
-.content_box .body_box .record_list_box .record_list .record_item .right .status {
+.content_box .body_box .record_list_box .record_list .record_item .center_info .right .status {
   font-size: 0.28rem;
   color: #777777;
   letter-spacing: 0.03rem;
+}
+.content_box .body_box .record_list_box .record_list .record_item .bottom_info {
+  border-bottom: 1px solid #eee;
+  font-size: 0.28rem;
+  color: #999;
+  line-height: 0.6rem;
+  padding: 0 0.2rem;
+}
+.content_box .body_box .message_list_box .message_list .message_item {
+  background: #ffffff;
+  padding: 0.2rem;
+  border-bottom: 1px solid #eee;
+}
+.content_box .body_box .message_list_box .message_list .message_item .text {
+  font-size: 0.34rem;
+  line-height: 0.4rem;
+}
+.content_box .body_box .message_list_box .message_list .message_item .time {
+  color: #999;
+  margin-top: 0.1rem;
+  font-size: 0.26rem;
 }

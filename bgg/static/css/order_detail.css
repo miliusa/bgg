@@ -99,6 +99,7 @@
   line-height: 0.6rem;
 }
 .content_box .body_box .deliver_info {
+  display: none;
   background: #FFFFFF;
   padding: 0.2rem;
   box-sizing: border-box;
@@ -111,6 +112,19 @@
 .content_box .body_box .deliver_info .call {
   display: inline-block;
   line-height: 1.2rem;
+  color: #f5633a;
+}
+.content_box .body_box .reciver_info {
+  display: none;
+  background: #FFFFFF;
+  padding: 0.2rem;
+  box-sizing: border-box;
+  font-size: 0.30rem;
+  line-height: 0.5rem;
+  margin-bottom: 0.1rem;
+}
+.content_box .body_box .reciver_info .call {
+  display: inline-block;
   color: #f5633a;
 }
 .content_box .body_box .price_info {
@@ -131,22 +145,23 @@
   margin-bottom: 0.1rem;
 }
 .content_box .body_box .return_code {
+  display: none;
   background: #FFFFFF;
-  height: 5rem;
   padding: 0.2rem;
   box-sizing: border-box;
   font-size: 0.28rem;
+  margin-bottom: 0.1rem;
 }
 .content_box .body_box .return_code .number {
   line-height: 0.6rem;
 }
-.content_box .body_box .return_code .code_box {
-  margin-top: 0.3rem;
+.content_box .body_box .return_code .code_img_box {
+  margin: 0.5rem auto;
+  width: 3.5rem;
+  height: 3.5rem;
 }
-.content_box .body_box .return_code .code_box img {
-  width: 3.1rem;
-  height: 3.1rem;
-  margin: 0 auto;
+.content_box .body_box .return_code .code_img_box img {
+  width: 100%;
 }
 .content_box .body_box .return_desc {
   background: #FFFFFF;
@@ -213,8 +228,7 @@
 .content_box .body_box .btn_box .b_btn {
   display: inline-block;
   margin-top: 0.15rem;
-  width: 1.6rem;
-  height: 0.6rem;
+  min-width: 1.6rem;
   line-height: 0.58rem;
   text-align: center;
   color: #434040;
@@ -227,8 +241,7 @@
   display: inline-block;
   margin-top: 0.15rem;
   margin-left: 0.2rem;
-  width: 1.6rem;
-  height: 0.6rem;
+  min-width: 1.6rem;
   line-height: 0.58rem;
   text-align: center;
   color: #FD4343;
@@ -398,4 +411,110 @@
   line-height: 2.5rem;
   font-size: 0.34rem;
   color: #5E5858;
+}
+.return_reason_select_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 0.3rem;
+  z-index: 11;
+  display: none;
+}
+.return_reason_select_modal .return_reason_select_content {
+  position: absolute;
+  bottom: 0;
+  background: #ffffff;
+  width: 100%;
+}
+.return_reason_select_modal .return_reason_select_content .return_reason_title {
+  padding: 0 0.2rem;
+  text-align: center;
+  line-height: 1rem;
+}
+.return_reason_select_modal .return_reason_select_content .return_reason_list {
+  padding: 0 0.2rem;
+}
+.return_reason_select_modal .return_reason_select_content .return_reason_list .return_reason_item {
+  border-bottom: 0.02rem solid #eee;
+  line-height: 0.7rem;
+}
+.return_reason_select_modal .return_reason_select_content .close_modal {
+  width: 100%;
+  background: #f5633a;
+  color: #ffffff;
+  height: 0.8rem;
+  border: none;
+  outline: none;
+}
+.recive_code_input_modal {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 11;
+}
+.recive_code_input_modal .recive_code_input_content {
+  background: #ffffff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.recive_code_input_modal .recive_code_input_content .recive_code_title {
+  line-height: 1rem;
+}
+.recive_code_input_modal .recive_code_input_content .recive_code_input_box {
+  position: relative;
+  height: 3rem;
+}
+.recive_code_input_modal .recive_code_input_content .recive_code_input_box input {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 5.5rem;
+  border-radius: 0.1rem;
+  padding: 0 1rem 0 0.2rem;
+  box-sizing: border-box;
+  height: 1rem;
+  border: 1px solid #eee;
+}
+.recive_code_input_modal .recive_code_input_content .recive_code_input_box .scan_code {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 1rem;
+  height: 1rem;
+  background: url(../img/scan.png) no-repeat center center;
+  background-size: 0.6rem 0.6rem;
+}
+.recive_code_input_modal .recive_code_input_content .recive_code_btn_box {
+  padding-bottom: 0.6rem;
+}
+.recive_code_input_modal .recive_code_input_content .recive_code_btn_box button {
+  line-height: 0.8rem;
+  border-radius: 0.1rem;
+  width: 40%;
+  outline: none;
+  border: none;
+  color: #fff;
+  background: #f5633a;
+}
+.recive_code_input_modal .recive_code_input_content .recive_code_btn_box .cancel_recive_code_btn {
+  margin-right: 10%;
+  border: 1px solid #f5633a;
+  background: #ffffff;
+  color: #f5633a;
+}
+.break_order_ordersn {
+  padding: 0 0.3rem;
+  border-bottom: 1px solid #eee;
+  line-height: 0.8rem;
+  font-size: 0.26rem;
+  color: #999;
 }

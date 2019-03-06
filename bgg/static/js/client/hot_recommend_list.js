@@ -66,7 +66,7 @@ $(function(){
 					loadall = false
 					if(res.data == '' || res.data.length < pagesize){
 						loadall = true
-						blackHiht("没有更多数据了");
+						// blackHiht("没有更多数据了");
 					}
 					if(page == 1){
 						if(res.data == ''){
@@ -94,7 +94,7 @@ $(function(){
 	function pullupRefresh() {
 		if(loadall){
 			mui('#pullrefresh').pullRefresh().endPullupToRefresh();
-			blackHiht('没有更多数据了');
+			// blackHiht('没有更多数据了');
 			$('.mui-pull-bottom-pocket').css('display', 'none');
 			return
 		}else{

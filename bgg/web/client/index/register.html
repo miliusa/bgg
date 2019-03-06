@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="LS">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../../static/css/mui.min.css">
+    <link rel="stylesheet" href="../../../static/css/share.css" />
+    <link rel="stylesheet" href="../../../static/css/register.css">
+    <title>用户注册</title>
+</head>
+
+<body>
+<div class="content_box">
+    <div class="head_box">
+        <i class="head_left_icon"></i>
+        <div class="head_title">注册</div>
+    </div>
+    <div class="body_box">
+        <div class="input_list">
+            <div class="input_item">
+                <div class="left_label">
+                    <span class="icon phone_icon"></span>
+                    <label for="phone">手机号:</label>
+                </div>
+                <div class="right_input">
+                    <input id="phone" type="text" placeholder="请输入手机号">
+                </div>
+            </div>
+            <div class="input_item">
+                <div class="left_label">
+                    <span class="icon code_icon"></span>
+                    <label for="img_code">图形码:</label>
+                </div>
+                <div class="right_input">
+                    <input id="img_code" type="text" placeholder="请输入图形码">
+                    <img class="img_code_show" src="/proStorage/public/captcha.html">
+                </div>
+            </div>
+            <div class="input_item">
+                <div class="left_label">
+                    <span class="icon code_icon"></span>
+                    <label for="code">验证码:</label>
+                </div>
+                <div class="right_input">
+                    <input id="code" type="text" placeholder="请输入验证码">
+                    <span class="get_code_btn active">获取验证码</span>
+                </div>
+            </div>
+            <div class="input_item">
+                <div class="left_label">
+                    <span class="icon password_icon"></span>
+                    <label for="password">密码:</label>
+                </div>
+                <div class="right_input">
+                    <input id="password" type="password" placeholder="请输入密码">
+                </div>
+            </div>
+            <div class="input_item">
+                <div class="left_label">
+                    <span class="icon password_icon"></span>
+                    <label for="password_again">确定密码:</label>
+                </div>
+                <div class="right_input">
+                    <input id="password_again" type="password" placeholder="请再次确认密码">
+                </div>
+            </div>
+        </div>
+        <div class="btn_box">
+            <button class="default_btn register active">注册</button>
+            <a href="https://www.pgyer.com/kyfc" class="to_download_btn">已注册,前往下载APP</a>
+        </div>
+    </div>
+</div>
+<script src="../../../static/js/jquery-1.11.0.min.js"></script>
+<script src="../../../static/js/share.js"></script>
+<script src="../../../static/js/client/register.js"></script>
+</body>
+
+</html>

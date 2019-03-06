@@ -12,11 +12,22 @@
 }
 .content_box .body_box .pay_info .ordersn {
   border-bottom: 1px solid #EEEEEE;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .content_box .body_box .pay_info span:first-child {
   display: inline-block;
   width: 5em;
   text-align: justify;
+}
+.content_box .body_box .price_show {
+  background: #FFFFFF;
+  margin-bottom: 0.1rem;
+  padding: 0 0.2rem;
+  box-sizing: border-box;
+  font-size: 0.36rem;
+  line-height: 1rem;
 }
 .content_box .body_box .pay_type {
   width: 100%;

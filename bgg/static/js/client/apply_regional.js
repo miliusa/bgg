@@ -1,11 +1,15 @@
 $(function () {
     // 立即申请
-    $('.apply.active').on('tap', function () {
-        goPartnerApply()
+    $('.apply_btn.active').on('tap', function () {
+        if(!getUserToken()){
+            doLogin()
+        }else{
+            goPartnerApply()
+        }
     })
     // 取消申请
     $('.cancel_btn.active').on('tap', function () {
-        if(getUserToken()){
+        if(!getUserToken()){
             doLogin()
         }else{
             $.ajax({

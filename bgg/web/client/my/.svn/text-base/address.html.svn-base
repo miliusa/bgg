@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Author" content="MXY">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>收货地址</title>
+		<link href="../../../static/css/share.css" rel="stylesheet" type="text/css" />
+		<link href="../../../static/css/address.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div class="content_box">
+			<div class="head_box white">
+				<i class="head_left_icon"></i>
+				<div class="head_title">收货地址</div>
+			</div>
+			<div class="body_box">
+				<!--<div class="list">
+					<div class="info">
+						<div class="info_text">
+							<div class="info_user">小金 13505561397</div>
+							<div class="address_center">安徽省 合肥市 包河区 金牛路与史河路交口龙居山庄锦龙居21栋2单元104</div>
+						</div>
+						<div class="info_delete"></div>
+					</div>
+					<div class="default">
+						<div class="default_block active">
+							<span class="default_icon"></span>
+							<span class="default_text">设为默认</span>
+						</div>
+						<div class="default_block right">
+							<a href="alter_address.html">
+								<span class="default_redact">编辑</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="list">
+					<div class="info">
+						<div class="info_text">
+							<div class="info_user">小金 13505561397</div>
+							<div class="address_center">安徽省 合肥市 包河区 金牛路与史河路交口龙居山庄锦龙居21栋2单元104</div>
+						</div>
+						<div class="info_delete"></div>
+					</div>
+					<div class="default">
+						<div class="default_block">
+							<span class="default_icon"></span>
+							<span class="default_text">设为默认</span>
+						</div>
+						<div class="default_block right">
+							<a href="alter_address.html">
+								<span class="default_redact">编辑</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="list">
+					<div class="info">
+						<div class="info_text">
+							<div class="info_user">小金 13505561397</div>
+							<div class="address_center">安徽省 合肥市 包河区 金牛路与史河路交口龙居山庄锦龙居21栋2单元104</div>
+						</div>
+						<div class="info_delete"></div>
+					</div>
+					<div class="default">
+						<div class="default_block">
+							<span class="default_icon"></span>
+							<span class="default_text">设为默认</span>
+						</div>
+						<div class="default_block right">
+							<a href="alter_address.html">
+								<span class="default_redact">编辑</span>
+							</a>
+						</div>
+					</div>
+				</div>-->
+			</div>
+			<div class="default_wrapper">
+				<a href="add_address.html">
+					<div class="default_btn">
+						<span class="jia"></span>
+						<span class="text">新增地址</span>
+					</div>
+				</a>
+			</div>				
+		</div>
+		<script src="../../../static/js/jquery-1.11.0.min.js"></script>
+		<script src="../../../static/js/share.js"></script>
+		<script src="../../../static/js/client/address.js"></script>
+	</body>
+
+</html>
